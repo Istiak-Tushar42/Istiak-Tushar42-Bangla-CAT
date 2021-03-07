@@ -88,6 +88,8 @@
                 .card {
                     .card-header {
                         .media {
+                            margin-left: 0;
+
                             .media-body {
                                 .media-title {
                                     font-size: 13px;
@@ -100,6 +102,10 @@
                                 }
                             }
                         }
+                    }
+
+                    .card-body {
+                        padding-left: 4.7rem;
                     }
                 }
             }

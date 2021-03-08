@@ -73,3 +73,20 @@ body {
 textarea {
     resize: none;
 }
+
+// .gj-datepicker {}
+.input-group-append {
+    .btn {
+        width: 100%;
+        height: 100%;
+
+        &:focus {
+            box-shadow: none;
+            border-color: $primary-color;
+        }
+    }
+}
+
+.form-control {
+    text-align: left;
+}

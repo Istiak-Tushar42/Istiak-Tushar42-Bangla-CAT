@@ -97,7 +97,7 @@
 
                                 .body-content {
                                     .body-text {
-                                        font-size: 12px;
+                                        font-size: 12px !important;
                                     }
                                 }
                             }
@@ -106,6 +106,18 @@
 
                     .card-body {
                         padding-left: 4.7rem;
+                    }
+
+                    .card-footer {
+                        margin-bottom: 2rem;
+                    }
+
+                    &:nth-child(2) {
+                        margin-bottom: 1.2rem;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 1.2rem;
                     }
                 }
             }
@@ -132,6 +144,18 @@
         .right-content {
             .right-top {
                 .card {
+                    .card-header {
+                        padding: 0;
+                        margin-top: 1.25rem;
+
+                        .card-title {
+                            font-size: 1rem;
+                            background: $primary-color;
+                            padding: .6rem 0;
+                            font-weight: bold;
+                        }
+                    }
+
                     .card-body {
                         .media {
                             .media-body {
@@ -163,7 +187,6 @@
     }
 
     .main {
-
         .login-details {
             margin: 100px 0 0;
             padding: 0;
@@ -326,8 +349,12 @@
         flex-direction: column;
         justify-content: space-between;
 
+
         .top-nav {
             margin-bottom: 1rem;
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
 
             li {
                 font-size: 14px;

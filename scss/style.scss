@@ -1068,13 +1068,13 @@ $primary-color: #fcb415;
 
                     textarea {
                         margin-bottom: .5rem;
+                        text-align: left;
                     }
 
                     .post-comment {
                         font-family: $secondary-font;
                         font-weight: bold;
                         font-size: 12px;
-                        text-align: center;
                         color: $black;
                         border: none;
                         background: $primary-color;
@@ -1149,18 +1149,27 @@ $primary-color: #fcb415;
                 border: none;
                 border-radius: 0;
 
-                .card-body {
+                .card-header {
+                    padding: 0;
+                    background: none;
+                    border-bottom: none;
+
                     .card-title {
                         font-size: 1rem;
+                        background: $primary-color;
+                        padding: 6.5px 0;
+                        font-weight: bold;
                         text-align: center;
-                        margin-bottom: .5rem;
                     }
+                }
 
+                .card-body {
                     .media {
                         .media-title {
                             font-size: 15px;
                             text-align: left;
-                            margin: 1rem 0 .4rem;
+                            margin: 1rem 3rem .4rem 0;
+                            width: 100%;
                         }
 
                         .text {

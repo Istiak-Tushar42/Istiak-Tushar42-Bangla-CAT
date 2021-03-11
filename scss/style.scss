@@ -57,6 +57,10 @@ $primary-color: #fcb415;
                     font-size: 25px;
                 }
 
+                .fa-image {
+                    font-size: 28px;
+                }
+
                 span {
                     transition: all .5s;
                 }
@@ -1142,8 +1146,55 @@ $primary-color: #fcb415;
     .right-content {
         min-height: 100%;
 
+        .right-head {
+            margin-bottom: 1.5rem;
+
+            .card {
+                border-radius: 0;
+
+                .card-header {
+                    background: transparent;
+                    border: none;
+
+                    .card-title {
+                        font-family: $primary-font;
+                        font-size: 18px;
+                        color: #000;
+                    }
+                }
+
+                .card-body {
+                    text-align: left;
+                    padding-top: 0;
+
+                    ul {
+                        list-style: none;
+
+                        li {
+                            position: relative;
+                            font-size: .9rem;
+                            margin-bottom: .5rem;
+                            margin-left: -.8rem;
+
+                            &::before {
+                                position: absolute;
+                                content: "-";
+                                top: -.25rem;
+                                left: -15px;
+                                font-size: 18px;
+                            }
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         .right-top {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
 
             .card {
                 border: none;
@@ -1156,15 +1207,21 @@ $primary-color: #fcb415;
 
                     .card-title {
                         font-size: 1rem;
-                        background: $primary-color;
-                        padding: 6.5px 0;
+                        background: #F7F700;
+                        padding: .5rem 0;
                         font-weight: bold;
                         text-align: center;
                     }
                 }
 
                 .card-body {
+                    max-height: 280px;
+                    overflow-y: scroll;
+
                     .media {
+                        border-bottom: solid 1px #e4e4e4;
+                        margin-bottom: 1rem;
+
                         .media-title {
                             font-size: 15px;
                             text-align: left;
@@ -1183,6 +1240,10 @@ $primary-color: #fcb415;
                                 font-size: .9rem;
                             }
                         }
+
+                        &:last-child {
+                            border-bottom: 0;
+                        }
                     }
 
                     .read-more {
@@ -1194,7 +1255,7 @@ $primary-color: #fcb415;
                         padding: .4rem;
                         border-radius: 3px;
                         font-size: 12px;
-                        margin: .5rem 0 25px;
+                        margin: .5rem 0 .75rem;
                     }
                 }
             }
@@ -1204,6 +1265,17 @@ $primary-color: #fcb415;
             .card {
                 border: none;
                 border-radius: 0;
+
+                .card-header {
+                    background: transparent;
+                    border: none;
+
+                    .card-title {
+                        font-size: 1.035rem;
+                        font-family: $primary-font;
+                        color: $black;
+                    }
+                }
 
                 .card-img {
                     overflow: hidden;

@@ -142,17 +142,20 @@
         }
 
         .right-content {
+
+            .right-head {
+                margin-top: 1.5rem;
+            }
+
             .right-top {
                 .card {
                     .card-header {
                         padding: 0;
-                        margin-top: 1.25rem;
+                        // margin-top: 1.25rem;
 
                         .card-title {
                             font-size: 1rem;
-                            background: $primary-color;
                             padding: .6rem 0;
-                            font-weight: bold;
                         }
                     }
 

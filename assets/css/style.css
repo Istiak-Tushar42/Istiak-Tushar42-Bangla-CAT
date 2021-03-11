@@ -403,6 +403,10 @@ textarea {
   font-size: 25px;
 }
 
+.header .nav .nav-item .nav-link .fa-image {
+  font-size: 28px;
+}
+
 .header .nav .nav-item .nav-link span {
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -1502,8 +1506,55 @@ textarea {
   min-height: 100%;
 }
 
+.main-section .right-content .right-head {
+  margin-bottom: 1.5rem;
+}
+
+.main-section .right-content .right-head .card {
+  border-radius: 0;
+}
+
+.main-section .right-content .right-head .card .card-header {
+  background: transparent;
+  border: none;
+}
+
+.main-section .right-content .right-head .card .card-header .card-title {
+  font-family: "Univers";
+  font-size: 18px;
+  color: #000;
+}
+
+.main-section .right-content .right-head .card .card-body {
+  text-align: left;
+  padding-top: 0;
+}
+
+.main-section .right-content .right-head .card .card-body ul {
+  list-style: none;
+}
+
+.main-section .right-content .right-head .card .card-body ul li {
+  position: relative;
+  font-size: .9rem;
+  margin-bottom: .5rem;
+  margin-left: -.8rem;
+}
+
+.main-section .right-content .right-head .card .card-body ul li::before {
+  position: absolute;
+  content: "-";
+  top: -.25rem;
+  left: -15px;
+  font-size: 18px;
+}
+
+.main-section .right-content .right-head .card .card-body ul li:last-child {
+  margin-bottom: 0;
+}
+
 .main-section .right-content .right-top {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .main-section .right-content .right-top .card {
@@ -1519,10 +1570,20 @@ textarea {
 
 .main-section .right-content .right-top .card .card-header .card-title {
   font-size: 1rem;
-  background: #fcb415;
-  padding: 6.5px 0;
+  background: #F7F700;
+  padding: .5rem 0;
   font-weight: bold;
   text-align: center;
+}
+
+.main-section .right-content .right-top .card .card-body {
+  max-height: 280px;
+  overflow-y: scroll;
+}
+
+.main-section .right-content .right-top .card .card-body .media {
+  border-bottom: solid 1px #e4e4e4;
+  margin-bottom: 1rem;
 }
 
 .main-section .right-content .right-top .card .card-body .media .media-title {
@@ -1544,6 +1605,10 @@ textarea {
   font-size: .9rem;
 }
 
+.main-section .right-content .right-top .card .card-body .media:last-child {
+  border-bottom: 0;
+}
+
 .main-section .right-content .right-top .card .card-body .read-more {
   display: inline-block;
   text-align: center;
@@ -1553,12 +1618,23 @@ textarea {
   padding: .4rem;
   border-radius: 3px;
   font-size: 12px;
-  margin: .5rem 0 25px;
+  margin: .5rem 0 .75rem;
 }
 
 .main-section .right-content .right-bottom .card {
   border: none;
   border-radius: 0;
+}
+
+.main-section .right-content .right-bottom .card .card-header {
+  background: transparent;
+  border: none;
+}
+
+.main-section .right-content .right-bottom .card .card-header .card-title {
+  font-size: 1.035rem;
+  font-family: "Univers";
+  color: #000000;
 }
 
 .main-section .right-content .right-bottom .card .card-img {
@@ -1716,15 +1792,15 @@ textarea {
   .main-section .content-middle .profile-form .drag-area button {
     font-size: 12px;
   }
+  .main-section .right-content .right-head {
+    margin-top: 1.5rem;
+  }
   .main-section .right-content .right-top .card .card-header {
     padding: 0;
-    margin-top: 1.25rem;
   }
   .main-section .right-content .right-top .card .card-header .card-title {
     font-size: 1rem;
-    background: #fcb415;
     padding: .6rem 0;
-    font-weight: bold;
   }
   .main-section .right-content .right-top .card .card-body .media .media-body .media-text {
     font-size: 12px;

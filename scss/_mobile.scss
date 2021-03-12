@@ -277,7 +277,7 @@
     }
 
     .reg-main {
-        min-height: 150vh;
+        min-height: 180vh;
 
         .form-header {
             display: flex;
@@ -441,7 +441,7 @@
 
 @media(min-width: 768px) and (max-width: 1080px) {
     .reg-main {
-        max-height: 100vh;
+        // max-height: 100vh;
 
         .reg-box {
             width: 100%;

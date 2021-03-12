@@ -1877,7 +1877,7 @@ textarea {
     font-size: 18px;
   }
   .reg-main {
-    min-height: 150vh;
+    min-height: 180vh;
   }
   .reg-main .form-header {
     display: -webkit-box;
@@ -2042,9 +2042,6 @@ textarea {
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
-  .reg-main {
-    max-height: 100vh;
-  }
   .reg-main .reg-box {
     width: 100%;
   }

@@ -1888,6 +1888,7 @@ textarea {
             align-items: center;
     color: white;
     margin: 2rem 0 -1rem;
+    overflow: hidden;
   }
   .reg-main .form-header-left {
     margin-right: 1rem;
@@ -2044,6 +2045,18 @@ textarea {
 @media (min-width: 768px) and (max-width: 1080px) {
   .reg-main .reg-box {
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .reg-main {
+    min-height: 250vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .reg-main {
+    min-height: 200vh;
   }
 }
 

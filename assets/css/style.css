@@ -819,6 +819,11 @@ textarea {
   color: #b4b4b4;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
+  border-bottom: solid 1.5px #e4e4e4;
+}
+
+.main-section .sidebar .nav .nav-item .nav-link:last-child {
+  border-bottom: 0;
 }
 
 .main-section .sidebar .nav .nav-item .nav-link .nav-text {
@@ -846,8 +851,6 @@ textarea {
   background: #F2F2F2;
   min-height: 100%;
   background: white;
-  height: 100vh;
-  overflow-y: scroll;
   /* POST FORM */
   /* POSTS */
   /* PROFILE FORM */
@@ -1743,9 +1746,9 @@ textarea {
 }
 
 .main-section .right-content {
-  max-height: 100%;
-  height: 100vh;
-  overflow-y: scroll;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 .main-section .right-content .right-head {

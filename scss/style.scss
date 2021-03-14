@@ -453,6 +453,11 @@ $primary-color: #fcb415;
                     font-size: 1rem;
                     color: #b4b4b4;
                     transition: all .5s ease-in-out;
+                    border-bottom: solid 1.5px #e4e4e4;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
 
                     .nav-text {
                         margin-left: .5rem;
@@ -486,8 +491,8 @@ $primary-color: #fcb415;
         background: #F2F2F2;
         min-height: 100%;
         background: white;
-        height: 100vh;
-        overflow-y: scroll;
+        // height: 100vh;
+        // overflow-y: scroll;
 
         .account-title {
             padding-top: 1rem;
@@ -1372,10 +1377,10 @@ $primary-color: #fcb415;
 
     /* RIGHT CONTENT */
     .right-content {
-        max-height: 100%;
+        // height: 100vh;
         // overflow-y: scroll;
-        height: 100vh;
-        overflow-y: scroll;
+        position: sticky;
+        top: 0;
 
         .right-head {
             margin-bottom: 1.5rem;

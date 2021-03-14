@@ -32,8 +32,7 @@ for (let a = 0; a < commentBtn.length; a++) {
         const commentBox = document.querySelectorAll('.comment-box');
 
         for (let i = 0; i < commentBox.length; i++) {
-            commentBox[i].style.opacity = '1';
-            commentBox[i].style.visibility = 'visible';
+            commentBox[i].style.display = 'block';
         }
     }
 }

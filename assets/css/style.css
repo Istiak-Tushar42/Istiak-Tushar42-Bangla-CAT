@@ -29,7 +29,7 @@
 
 body {
   margin: 0;
-  font-family: "Univers";
+  font-family: "Univers-Light-Normal";
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -454,7 +454,7 @@ textarea {
 /** MAIN SECTION START */
 .main {
   background: url(../images/background.svg) no-repeat center center/cover;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -508,6 +508,22 @@ textarea {
   margin-bottom: 2rem;
 }
 
+.main .login-details .login-form .form-control {
+  position: relative;
+}
+
+.main .login-details .login-form .pass {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .main .login-details .login-form .forgot-link,
 .main .login-details .login-form .register-link {
   color: #fcb415;
@@ -531,7 +547,7 @@ textarea {
   background: #fcb415;
   margin-left: 1rem;
   font-family: "Univers-Light-Normal";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.25rem;
   padding: .35rem 1rem;
   border: none;
@@ -575,6 +591,11 @@ textarea {
   font-size: 1rem;
 }
 
+.main .login-details .login-form .input-group .input-group-text .icon-password {
+  font-size: 1.5rem;
+  padding-right: .5rem;
+}
+
 .main .alumni-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,81 +604,6 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
-}
-
-.main .register-form {
-  border-radius: 25px;
-  background: rgba(0, 0, 0, 0.4);
-  border: 3px solid #fcb415;
-  margin-top: 2.5rem;
-  padding: 1.75rem;
-}
-
-.main .register-form .register-title {
-  font-family: "Univers";
-  font-weight: bold;
-  font-size: 43px;
-  text-align: left;
-  color: #ffffff;
-}
-
-.main .register-form .register-text {
-  font-family: "Univers-Light-Normal";
-  font-weight: 500;
-  font-size: 20px;
-  text-align: left;
-  color: #ddd;
-}
-
-.main .register-form .form-control {
-  font-size: 1rem;
-}
-
-.main .register-form .register-btn {
-  padding: .75rem 2rem;
-  border: none;
-  background: #fcb415;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.main .register-form .register-btn:hover {
-  background: #a97502;
-}
-
-.main .register-form .form-check-label {
-  color: #ffffff;
-}
-
-.main .register-form .form-check-label .term-use {
-  color: #fcb415;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.main .register-form .form-check-label .term-use:hover {
-  text-decoration: none;
-}
-
-.main .register-form .input-group .input-group-text span,
-.main .register-form .input-group .input-group-text i {
-  font-size: 1rem;
-}
-
-.main .register-txt {
-  font-family: "Univers-Light-Normal";
-  font-weight: 500;
-  font-size: 20px;
-  color: #ddd;
-}
-
-.main .register-txt a {
-  text-decoration: none;
-  color: #fcb415;
-}
-
-.main .register-txt a:hover {
-  text-decoration: underline;
 }
 
 .main .welcome {
@@ -779,12 +725,19 @@ textarea {
 .main-section {
   background: #1f1f1f;
   padding: 1.5rem 0;
+  /* SIDEBAR */
+  /* MIDDLE CONTENT */
+  /* RIGHT CONTENT */
 }
 
 .main-section .sidebar {
   background: #ffffff;
-  height: 100%;
   padding: 1.2rem 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  overflow-y: scroll;
+  max-height: 100vh;
 }
 
 .main-section .sidebar .sidebar-img {
@@ -893,6 +846,12 @@ textarea {
   background: #F2F2F2;
   min-height: 100%;
   background: white;
+  height: 100vh;
+  overflow-y: scroll;
+  /* POST FORM */
+  /* POSTS */
+  /* PROFILE FORM */
+  /* MULTI POSTS */
 }
 
 .main-section .content-middle .account-title {
@@ -930,10 +889,16 @@ textarea {
 }
 
 .main-section .content-middle .post-form .post-btn {
+  font-family: "Univers-Light-Normal";
+  font-weight: 600;
   background: #fcb415;
   border: none;
   padding: .5rem 1.5rem;
   border-radius: 3px;
+}
+
+.main-section .content-middle .post-form .post-btn:hover {
+  background: #db9803;
 }
 
 .main-section .content-middle .posts .card {
@@ -947,16 +912,24 @@ textarea {
 }
 
 .main-section .content-middle .posts .card .card-header .media .media-body .media-title {
-  font-size: 15px;
-  font-weight: 500;
+  font-weight: 600;
   color: #595959;
   margin-top: 1rem;
+  font-family: "Univers-Light-Normal";
+  margin-bottom: 0;
 }
 
 .main-section .content-middle .posts .card .card-header .media .media-body .media-text {
-  font-size: 13px;
-  font-weight: 300;
+  font-size: 14px;
+  font-weight: 500;
   color: #595959;
+  font-family: "Univers-Light-Normal";
+}
+
+.main-section .content-middle .posts .card .card-header .media small {
+  font-weight: 600;
+  color: #000000;
+  font-family: "Univers-Light-Normal";
 }
 
 .main-section .content-middle .posts .card .card-body {
@@ -964,8 +937,9 @@ textarea {
 }
 
 .main-section .content-middle .posts .card .card-body .card-text {
-  font-weight: 300;
-  font-size: 14px;
+  font-family: "Univers-Light-Normal";
+  font-weight: 500;
+  font-size: 15px;
   line-height: 16px;
   text-align: left;
 }
@@ -1009,7 +983,8 @@ textarea {
 }
 
 .main-section .content-middle .posts .card .card-body .nav .nav-item button span {
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: 500;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -1019,8 +994,9 @@ textarea {
 }
 
 .main-section .content-middle .posts .card .card-body .nav .nav-item span {
-  font-weight: 300;
-  font-size: 13px;
+  font-family: "Univers-Light-Normal";
+  font-weight: 500;
+  font-size: 15px;
   line-height: 14px;
   text-align: left;
   color: #a7a9ac;
@@ -1030,7 +1006,9 @@ textarea {
   background: transparent;
   border: none;
   color: #000000;
-  font-size: 14px;
+  font-family: "Univers-Light-Normal";
+  font-size: 1rem;
+  font-weight: 500;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -1044,8 +1022,8 @@ textarea {
 }
 
 .main-section .content-middle .posts .card .card-footer .comment-box {
-  opacity: 0;
-  visibility: hidden;
+  display: none;
+  margin-top: -.5rem;
 }
 
 .main-section .content-middle .account-title {
@@ -1062,13 +1040,238 @@ textarea {
 
 .main-section .content-middle .profile-form {
   padding: 1rem;
-  min-height: 1200px;
+  overflow-x: hidden;
+}
+
+.main-section .content-middle .profile-form .group {
+  margin-bottom: 1.5rem;
+  padding: 1rem 0;
+}
+
+.main-section .content-middle .profile-form .group .col-1 {
+  height: 244px;
+  margin-top: -1rem;
+}
+
+.main-section .content-middle .profile-form .group .title {
+  height: 100%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  padding-top: 0;
+  position: relative;
+  margin-right: -1rem;
+}
+
+.main-section .content-middle .profile-form .group .title h5 {
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  margin-top: 0;
+  color: #595959;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.main-section .content-middle .profile-form .group .title h5 span {
+  position: relative;
+  display: inline-block;
+}
+
+.main-section .content-middle .profile-form .group .title h5 span::before {
+  content: '';
+  position: absolute;
+  bottom: -45px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group .title h5 span::after {
+  content: '';
+  position: absolute;
+  top: -45px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group2 .col-1 {
+  height: 350px;
+}
+
+.main-section .content-middle .profile-form .group2 .title {
+  height: 100%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  padding-top: 0;
+  position: relative;
+  margin-right: -1rem;
+}
+
+.main-section .content-middle .profile-form .group2 .title h5 {
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  margin-top: 0;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+.main-section .content-middle .profile-form .group2 .title h5 span {
+  position: relative;
+  display: inline-block;
+}
+
+.main-section .content-middle .profile-form .group2 .title h5 span::before {
+  content: '';
+  position: absolute;
+  bottom: -83px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group2 .title h5 span::after {
+  content: '';
+  position: absolute;
+  top: -83px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group3 .col-1 {
+  height: 360px;
+}
+
+.main-section .content-middle .profile-form .group3 .title {
+  height: 100%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  padding-top: 0;
+  position: relative;
+  margin-right: -1rem;
+}
+
+.main-section .content-middle .profile-form .group3 .title h5 {
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  margin-top: 0;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+.main-section .content-middle .profile-form .group3 .title h5 span {
+  position: relative;
+  display: inline-block;
+}
+
+.main-section .content-middle .profile-form .group3 .title h5 span::before {
+  content: '';
+  position: absolute;
+  bottom: -61px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group3 .title h5 span::after {
+  content: '';
+  position: absolute;
+  top: -61px;
+  left: -11px;
+  width: 60px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group4 .title {
+  height: 100%;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: center;
+  padding-top: 0;
+  position: relative;
+  margin-right: -1rem;
+}
+
+.main-section .content-middle .profile-form .group4 .title h5 {
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  margin-top: 0;
+  color: #595959;
+  margin-bottom: 0;
+}
+
+.main-section .content-middle .profile-form .group4 .title h5 span {
+  position: relative;
+  display: inline-block;
+}
+
+.main-section .content-middle .profile-form .group4 .title h5 span::before {
+  content: '';
+  position: absolute;
+  bottom: -21px;
+  left: 4px;
+  width: 30px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .group4 .title h5 span::after {
+  content: '';
+  position: absolute;
+  top: -21px;
+  left: 4px;
+  width: 30px;
+  height: 1px;
+  background: #000000;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.main-section .content-middle .profile-form .form-drag {
+  width: 190px;
+  height: 190px;
+  border: dotted 1.5px #d0d0d0;
+  background: #f7f7f7;
 }
 
 .main-section .content-middle .profile-form .drag-area {
-  border: 1px solid #fcb415;
-  height: 100%;
   width: 100%;
+  height: 100%;
   border-radius: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1084,37 +1287,46 @@ textarea {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto 1rem;
+  background: #efefef;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .main-section .content-middle .profile-form .drag-area .icon {
-  font-size: 60px;
+  font-size: 30px;
   color: #fcb415;
 }
 
 .main-section .content-middle .profile-form .drag-area header {
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: 500;
-  color: #fcb415;
+  color: #000000;
+  font-family: "Univers-Light-Normal";
 }
 
 .main-section .content-middle .profile-form .drag-area span {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
-  color: #fcb415;
+  color: #000000;
   margin: 10px 0 15px 0;
+  font-family: "Univers-Light-Normal";
 }
 
 .main-section .content-middle .profile-form .drag-area button {
-  padding: .5rem 1rem;
+  padding: 0;
   font-size: 1rem;
-  font-weight: 500;
   border: none;
   outline: none;
-  background: #fcb415;
-  color: #000000;
-  border-radius: 5px;
+  background: transparent;
+  border-bottom: solid 1px;
+  border-radius: 0;
   cursor: pointer;
   margin-bottom: 15px;
+  color: #fcb415;
+  font-family: "Univers-Light-Normal";
+  margin-top: .75rem;
+  margin-left: .5rem;
+  font-weight: 600;
 }
 
 .main-section .content-middle .profile-form .drag-area img {
@@ -1134,20 +1346,48 @@ textarea {
   border: none;
   padding: .5rem 1.5rem;
   border-radius: 3px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.main-section .content-middle .profile-form .change-btn:hover {
+  background: #db9803;
 }
 
 .main-section .content-middle .profile-form textarea {
   resize: none;
 }
 
+.main-section .content-middle .profile-form .add-more {
+  background: #fcb415;
+  border: none;
+  color: #000000;
+  font-family: "Univers-Light-Normal";
+  font-size: 1rem;
+  font-weight: 500;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  padding: .4rem;
+  border-radius: 3px;
+}
+
+.main-section .content-middle .profile-form .add-more:last-child {
+  margin-bottom: 2rem;
+}
+
+.main-section .content-middle .multi {
+  background: #f9f9f9;
+}
+
 .main-section .content-middle .multi .card {
   border: none;
   border-radius: 0;
   border-bottom: 1.5px solid #e4e4e4;
+  background: transparent;
 }
 
 .main-section .content-middle .multi .card .card-header .media {
-  margin-left: 45px;
+  margin-left: 25px;
 }
 
 .main-section .content-middle .multi .card .card-header .media .media-img {
@@ -1167,23 +1407,19 @@ textarea {
   color: #595959;
 }
 
-.main-section .content-middle .multi .card .card-header .media .media-body .body-content .body-text {
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: left;
-}
-
-.main-section .content-middle .multi .card .card-header .media .media-body .body-content small {
-  margin-top: .4rem;
-  display: inline-block;
-  font-size: 13px;
+.main-section .content-middle .multi .card .card-header .media .media-body .body-content hr {
+  border-top: 1.5px;
+  border-bottom: none;
 }
 
 .main-section .content-middle .multi .card .card-header .media .media-body .body-content .card {
   border: none;
   border-radius: 0;
   border-bottom: 1.5px solid #e4e4e4;
+}
+
+.main-section .content-middle .multi .card .card-header .media .media-body .body-content .card:last-child {
+  border-bottom: none;
 }
 
 .main-section .content-middle .multi .card .card-header .media .media-body .body-content .card .card-header {
@@ -1209,6 +1445,10 @@ textarea {
   font-size: 13px;
   font-weight: 300;
   color: #595959;
+}
+
+.main-section .content-middle .multi .card .card-header .media .media-body .body-content .card .card-header .media .media-body .body-content {
+  margin-bottom: .25rem;
 }
 
 .main-section .content-middle .multi .card .card-header .media .media-body .body-content .card .card-header .media .media-body .body-content .body-text {
@@ -1503,7 +1743,9 @@ textarea {
 }
 
 .main-section .right-content {
-  min-height: 100%;
+  max-height: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .main-section .right-content .right-head {
@@ -1523,6 +1765,8 @@ textarea {
   font-family: "Univers";
   font-size: 18px;
   color: #000;
+  font-weight: 600;
+  text-align: left;
 }
 
 .main-section .right-content .right-head .card .card-body {
@@ -1536,9 +1780,11 @@ textarea {
 
 .main-section .right-content .right-head .card .card-body ul li {
   position: relative;
-  font-size: .9rem;
   margin-bottom: .5rem;
   margin-left: -.8rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
 }
 
 .main-section .right-content .right-head .card .card-body ul li::before {
@@ -1569,16 +1815,17 @@ textarea {
 }
 
 .main-section .right-content .right-top .card .card-header .card-title {
-  font-size: 1rem;
-  background: #F7F700;
-  padding: .5rem 0;
-  font-weight: bold;
-  text-align: center;
+  font-family: "Univers";
+  font-size: 18px;
+  padding: .5rem 0 .5rem 1rem;
+  text-align: left;
+  font-weight: 600;
 }
 
 .main-section .right-content .right-top .card .card-body {
-  max-height: 280px;
+  max-height: 180px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .main-section .right-content .right-top .card .card-body .media {
@@ -1587,14 +1834,21 @@ textarea {
 }
 
 .main-section .right-content .right-top .card .card-body .media .media-title {
+  font-family: "Univers";
   font-size: 15px;
+  color: #595959;
   text-align: left;
-  margin: 1rem 3rem .4rem 0;
-  width: 100%;
+  margin: 1rem 0 0 0;
+  width: 80px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 600;
 }
 
 .main-section .right-content .right-top .card .card-body .media .text {
-  font-size: 13px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .main-section .right-content .right-top .card .card-body .media .media-body {
@@ -1602,7 +1856,10 @@ textarea {
 }
 
 .main-section .right-content .right-top .card .card-body .media .media-body .media-text {
-  font-size: .9rem;
+  font-size: 15px;
+  color: #000000;
+  text-align: left;
+  font-weight: 500;
 }
 
 .main-section .right-content .right-top .card .card-body .media:last-child {
@@ -1632,9 +1889,10 @@ textarea {
 }
 
 .main-section .right-content .right-bottom .card .card-header .card-title {
-  font-size: 1.035rem;
   font-family: "Univers";
-  color: #000000;
+  font-size: 17px;
+  text-align: left;
+  font-weight: 600;
 }
 
 .main-section .right-content .right-bottom .card .card-img {
@@ -1652,8 +1910,14 @@ textarea {
           transform: scale(1.2);
 }
 
+.main-section .right-content .right-bottom .card .card-body {
+  padding-bottom: 0;
+}
+
 .main-section .right-content .right-bottom .card .card-body .card-text {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
 }
 
 .main-section .right-content .right-bottom .card .card-body .read-more {
@@ -1668,21 +1932,148 @@ textarea {
   margin: .5rem 0 25px;
 }
 
+.main-section .right-content .right-bottom .card .card-body .read-more:last-child {
+  border-bottom: none;
+}
+
+.reg-main {
+  background: url(../images/background.svg) no-repeat center center/cover;
+  position: relative;
+}
+
+.reg-main .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reg-main .register-form {
+  border-radius: 25px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 3px solid #fcb415;
+  margin-top: 2.5rem;
+  padding: 1.75rem;
+  font-family: "Univers-Light-Normal";
+  z-index: 1;
+}
+
+.reg-main .register-form .register-title {
+  font-family: "Univers-Light-Normal";
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left !important;
+  color: #ffffff;
+  text-align: center;
+}
+
+.reg-main .register-form .register-text {
+  font-family: "Univers-Light-Normal";
+  font-weight: 500;
+  font-size: 17px !important;
+  text-align: left;
+  color: #ddd;
+  display: block;
+  text-align: center;
+}
+
+.reg-main .register-form .form-control {
+  font-size: 1rem;
+  position: relative;
+}
+
+.reg-main .register-form .pass {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+  height: 100%;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.reg-main .register-form .register-btn {
+  padding: .75rem 2rem;
+  border: none;
+  background: #fcb415;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  font-family: "Univers-Light-Normal";
+  font-weight: 600;
+  border-radius: .25rem;
+}
+
+.reg-main .register-form .register-btn:hover {
+  background: #a97502;
+}
+
+.reg-main .register-form .form-check-label {
+  color: #ffffff;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.reg-main .register-form .form-check-label .term-use {
+  color: #fcb415;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.reg-main .register-form .form-check-label .term-use:hover {
+  text-decoration: none;
+}
+
+.reg-main .register-form .input-group .input-group-text span,
+.reg-main .register-form .input-group .input-group-text i {
+  font-size: 1rem;
+}
+
+.reg-main .register-form .input-group .input-group-text .icon-password {
+  padding-right: .25rem;
+  font-size: 1.5rem;
+}
+
+.reg-main .register-form .input-group .input-group-text .fa-phone-alt {
+  font-size: 1.25rem;
+}
+
+.reg-main .register-txt {
+  font-family: "Univers-Light-Normal";
+  font-weight: 500;
+  font-size: 20px !important;
+  color: #ddd;
+  margin-bottom: 1.75rem !important;
+}
+
+.reg-main .register-txt a {
+  text-decoration: none;
+  color: #fcb415;
+}
+
+.reg-main .register-txt a:hover {
+  text-decoration: underline;
+}
+
 /** MAIN SECTION END */
 /** FOOTER SECTION START */
 .footer {
   background: #000000;
-  padding: 14px;
+  padding: 16px;
+  font-weight: 600;
   border-top: solid 0.25rem #fcb415;
 }
 
 .footer .left-side img {
   cursor: pointer;
+  margin-right: auto;
 }
 
 .footer .right-side-text {
   color: #ffffff;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 12px;
 }
 
@@ -1705,6 +2096,13 @@ textarea {
 /** FOOTER SECTION END*/
 /** RESPONSIVE DESIGN START HERE */
 @media (max-width: 768px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    border-width: .25rem;
+  }
   .header .responsive-menu .brand {
     margin: .5rem 0 .5rem;
     display: block;
@@ -1749,6 +2147,13 @@ textarea {
   .header .alu-text {
     font-size: 13px;
   }
+  .main-section {
+    margin-top: 80px;
+  }
+  .main-section .content-middle {
+    height: 100%;
+    overflow-y: hidden;
+  }
   .main-section .content-middle .account-title {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1759,19 +2164,19 @@ textarea {
     min-height: 100%;
   }
   .main-section .content-middle .posts .card .card-body .card-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main-section .content-middle .posts .card .card-body .comment-btn {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main-section .content-middle .multi .card .card-header .media {
     margin-left: 0;
   }
   .main-section .content-middle .multi .card .card-header .media .media-body .media-title {
-    font-size: 13px;
+    font-size: 14px;
   }
   .main-section .content-middle .multi .card .card-header .media .media-body .body-content .body-text {
-    font-size: 12px !important;
+    font-size: 14px !important;
   }
   .main-section .content-middle .multi .card .card-body {
     padding-left: 4.7rem;
@@ -1786,11 +2191,15 @@ textarea {
     margin-bottom: 1.2rem;
   }
   .main-section .content-middle .card .card-header small {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main-section .content-middle .profile-form .drag-area header,
   .main-section .content-middle .profile-form .drag-area button {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .main-section .right-content {
+    height: 100%;
+    overflow-y: hidden;
   }
   .main-section .right-content .right-head {
     margin-top: 1.5rem;
@@ -1801,15 +2210,21 @@ textarea {
   .main-section .right-content .right-top .card .card-header .card-title {
     font-size: 1rem;
     padding: .6rem 0;
+    background: #F7F700;
+    text-align: center;
   }
   .main-section .right-content .right-top .card .card-body .media .media-body .media-text {
     font-size: 12px;
   }
   .main-section .right-content .right-bottom .card .card-body .card-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main-section .form-group label {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .main .overlay {
+    height: 100%;
+    margin-bottom: 2rem;
   }
   .main .login-details {
     margin: 100px 0 0;
@@ -1822,62 +2237,23 @@ textarea {
     font-size: 1.75rem;
   }
   .main .forgot-details .forgot-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main .alumni-img img {
     width: 100px;
     height: 100px;
   }
-  .main .register-form .register-title {
-    font-size: 1.75rem;
-  }
-  .main .register-form .register-text {
-    font-size: 12px !important;
-    color: #ffffff;
-  }
-  .main .register-form .register-text a {
-    text-decoration: none;
-    font-size: 12px !important;
-  }
-  .main .register-form .register-text a:hover {
-    text-decoration: underline;
-  }
-  .main .register-form .lead {
-    font-size: 12px !important;
-    color: #ffffff;
-  }
-  .main .register-form .form-group {
-    font-size: 12px;
-  }
-  .main .register-form .form-group .form-control::-webkit-input-placeholder {
-    font-size: 14px;
-  }
-  .main .register-form .form-group .form-control:-ms-input-placeholder {
-    font-size: 14px;
-  }
-  .main .register-form .form-group .form-control::-ms-input-placeholder {
-    font-size: 14px;
-  }
-  .main .register-form .form-group .form-control::placeholder {
-    font-size: 14px;
-  }
-  .main .register-form .form-check-label {
-    font-size: 12px;
-  }
-  .main .register-txt {
-    font-size: 12px;
-  }
   .main .welcome .welcome-title {
     font-size: 1.75rem;
   }
   .main .welcome .welcome-text {
-    font-size: 12px;
+    font-size: 14px;
   }
   .main .welcome .welcome-text .success {
     font-size: 18px;
   }
   .reg-main {
-    min-height: 180vh;
+    max-height: 100vh;
   }
   .reg-main .form-header {
     display: -webkit-box;
@@ -1897,8 +2273,96 @@ textarea {
     width: 70px;
     height: 70px;
   }
-  .main-sec {
-    min-height: 100vh;
+  .reg-main .register-form {
+    overflow: hidden;
+    border: none;
+    margin-top: 0;
+    max-height: 100vh;
+    overflow-y: scroll !important;
+  }
+  .reg-main .register-form .register-title {
+    font-size: 1.25rem;
+    text-align: center !important;
+  }
+  .reg-main .register-form .imag {
+    display: inline-block;
+  }
+  .reg-main .register-form .imag img {
+    width: 50px;
+    height: 50px;
+    margin-left: 0rem;
+  }
+  .reg-main .register-form .rig {
+    margin-top: -3rem;
+    margin-left: 1rem;
+  }
+  .reg-main .register-form .rig .register-text {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 0 !important;
+  }
+  .reg-main .register-form .register-text {
+    font-size: 14px !important;
+    color: #ffffff;
+    margin-bottom: 0;
+  }
+  .reg-main .register-form .register-text a {
+    text-decoration: none;
+    font-size: 14px !important;
+  }
+  .reg-main .register-form .register-text a:hover {
+    text-decoration: underline;
+  }
+  .reg-main .register-form .lead {
+    font-size: 14px !important;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group,
+  .reg-main .register-form .input-group {
+    font-size: 14px;
+  }
+  .reg-main .register-form .form-group .form-control,
+  .reg-main .register-form .input-group .form-control {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1.5px #707070;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group .form-control::-webkit-input-placeholder,
+  .reg-main .register-form .input-group .form-control::-webkit-input-placeholder {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group .form-control:-ms-input-placeholder,
+  .reg-main .register-form .input-group .form-control:-ms-input-placeholder {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group .form-control::-ms-input-placeholder,
+  .reg-main .register-form .input-group .form-control::-ms-input-placeholder {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group .form-control::placeholder,
+  .reg-main .register-form .input-group .form-control::placeholder {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-group .input-group-text,
+  .reg-main .register-form .input-group .input-group-text {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1.5px #707070;
+    color: #ffffff;
+  }
+  .reg-main .register-form .form-check-label {
+    font-size: 14px;
+  }
+  .reg-main .main.reg-main {
+    height: auto !important;
+  }
+  .reg-main .register-txt {
+    font-size: 14px;
   }
   .main-sec .alumni {
     padding: 1.5rem 0;
@@ -1915,13 +2379,46 @@ textarea {
   }
   .post-btn,
   .change-btn {
-    font-size: 12px;
+    font-size: 14px;
   }
   .media-text,
   p,
   .card-text,
   .comment-btn {
-    font-size: 12px;
+    font-size: 14px;
+  }
+  .header.login-header,
+  .header.welcome-header,
+  .header.forgot-header {
+    position: static !important;
+  }
+  .header.login-header .brand img,
+  .header.welcome-header .brand img,
+  .header.forgot-header .brand img {
+    width: 60%;
+  }
+  .header.login-header .alu-text,
+  .header.welcome-header .alu-text,
+  .header.forgot-header .alu-text {
+    font-size: 1rem !important;
+  }
+  .form-control {
+    border-radius: 2px;
+  }
+  .register-text {
+    font-size: 15px;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+    margin-left: 0 !important;
+  }
+  .header.reg-header {
+    position: static !important;
+  }
+  .header.reg-header .brand img {
+    width: 40%;
+  }
+  .footer .left-side img {
+    margin: 0 auto;
   }
 }
 
@@ -2029,6 +2526,10 @@ textarea {
   left: 0;
 }
 
+.footer {
+  overflow: hidden;
+}
+
 .footer .left-side {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2042,21 +2543,48 @@ textarea {
   margin-bottom: .5rem;
 }
 
-@media (min-width: 768px) and (max-width: 1080px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .reg-main .reg-box {
     width: 100%;
   }
-}
-
-@media (max-width: 640px) {
-  .reg-main {
-    min-height: 250vh;
+  .register-form {
+    border: none !important;
+  }
+  .register-form .imag {
+    display: inline-block;
+  }
+  .register-form .imag img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  .register-form .register-title {
+    text-align: left !important;
+    margin-left: 1rem;
+    font-size: 1rem !important;
+  }
+  .register-form .rig {
+    margin-left: 0 !important;
+    margin-top: -2rem !important;
+    text-align: left !important;
+  }
+  .register-form .rig .register-text {
+    font-size: 13px;
+    text-align: left !important;
+  }
+  .register-form .rig .register-title {
+    text-align: left !important;
+    margin-left: 1rem;
+    font-size: 1.2rem !important;
+    margin-top: -1rem !important;
   }
 }
 
-@media (max-width: 600px) {
-  .reg-main {
-    min-height: 200vh;
+@media (max-width: 414px) {
+  .register-form-title {
+    font-size: 1rem !important;
+  }
+  .register-form-text {
+    margin-bottom: 0 !important;
   }
 }
 

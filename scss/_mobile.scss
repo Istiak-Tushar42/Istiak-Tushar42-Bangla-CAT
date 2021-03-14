@@ -1,5 +1,11 @@
 @media(max-width: 768px) {
     .header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        border-width: .25rem;
+
         .responsive-menu {
             .brand {
                 margin: .5rem 0 .5rem;
@@ -59,7 +65,11 @@
     }
 
     .main-section {
+        margin-top: 80px;
+
         .content-middle {
+            height: 100%;
+            overflow-y: hidden;
 
             .account-title {
                 justify-content: center;
@@ -74,11 +84,11 @@
                 .card {
                     .card-body {
                         .card-text {
-                            font-size: 12px;
+                            font-size: 14px;
                         }
 
                         .comment-btn {
-                            font-size: 12px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -92,12 +102,12 @@
 
                             .media-body {
                                 .media-title {
-                                    font-size: 13px;
+                                    font-size: 14px;
                                 }
 
                                 .body-content {
                                     .body-text {
-                                        font-size: 12px !important;
+                                        font-size: 14px !important;
                                     }
                                 }
                             }
@@ -125,7 +135,7 @@
             .card {
                 .card-header {
                     small {
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -135,13 +145,15 @@
 
                     header,
                     button {
-                        font-size: 12px;
+                        font-size: 14px;
                     }
                 }
             }
         }
 
         .right-content {
+            height: 100%;
+            overflow-y: hidden;
 
             .right-head {
                 margin-top: 1.5rem;
@@ -156,6 +168,8 @@
                         .card-title {
                             font-size: 1rem;
                             padding: .6rem 0;
+                            background: #F7F700;
+                            text-align: center;
                         }
                     }
 
@@ -175,7 +189,7 @@
                 .card {
                     .card-body {
                         .card-text {
-                            font-size: 12px;
+                            font-size: 14px;
                         }
                     }
                 }
@@ -184,12 +198,21 @@
 
         .form-group {
             label {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
     }
 
     .main {
+        // position: static;
+        // height: 120vh;
+        // overflow: hidden;
+
+        .overlay {
+            height: 100%;
+            margin-bottom: 2rem;
+        }
+
         .login-details {
             margin: 100px 0 0;
             padding: 0;
@@ -205,7 +228,7 @@
             }
 
             .forgot-text {
-                font-size: 12px;
+                font-size: 14px;
             }
         }
 
@@ -216,69 +239,25 @@
             }
         }
 
-        .register-form {
-            .register-title {
-                font-size: 1.75rem;
-            }
-
-            .register-text {
-                font-size: 12px !important;
-                color: $white;
-
-                a {
-                    text-decoration: none;
-                    font-size: 12px !important;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-
-            .lead {
-                font-size: 12px !important;
-                color: $white;
-            }
-
-            .form-group {
-                font-size: 12px;
-
-                .form-control {
-                    &::placeholder {
-                        font-size: 14px;
-                    }
-                }
-            }
-
-            .form-check-label {
-                font-size: 12px;
-            }
-        }
-
-        .register-txt {
-            font-size: 12px;
-        }
-
         .welcome {
             .welcome-title {
                 font-size: 1.75rem;
             }
 
             .welcome-text {
-                font-size: 12px;
+                font-size: 14px;
 
                 .success {
                     font-size: 18px;
                 }
             }
         }
-
-
     }
 
     .reg-main {
-        min-height: 180vh;
-        // overflow: hidden;
+        // height: auto;
+        max-height: 100vh;
+        // overflow-y: scroll;
 
         .form-header {
             display: flex;
@@ -296,14 +275,102 @@
                 }
             }
         }
+
+        .register-form {
+            overflow: hidden;
+            border: none;
+            margin-top: 0;
+            max-height: 100vh;
+            overflow-y: scroll !important;
+
+            .register-title {
+                font-size: 1.25rem;
+                text-align: center !important;
+            }
+
+            .imag {
+                display: inline-block;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 0rem;
+                }
+            }
+
+            .rig {
+                margin-top: -3rem;
+                margin-left: 1rem;
+
+                .register-text {
+                    font-size: 13px;
+                    // margin-left: 1rem;
+                    text-align: center;
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            .register-text {
+                font-size: 14px !important;
+                color: $white;
+                margin-bottom: 0;
+
+                a {
+                    text-decoration: none;
+                    font-size: 14px !important;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .lead {
+                font-size: 14px !important;
+                color: $white;
+            }
+
+            .form-group,
+            .input-group {
+                font-size: 14px;
+
+                .form-control {
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1.5px #707070;
+                    color: #ffffff;
+
+                    &::placeholder {
+                        font-size: 14px;
+                        color: #ffffff;
+                    }
+                }
+
+                .input-group-text {
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1.5px #707070;
+                    color: #ffffff;
+                }
+            }
+
+            .form-check-label {
+                font-size: 14px;
+            }
+        }
+
+        .main.reg-main {
+            height: auto !important;
+        }
+
+        .register-txt {
+            font-size: 14px;
+        }
     }
 
     .main-sec {
-        min-height: 100vh;
-
         .alumni {
             padding: 1.5rem 0;
-
         }
 
         .alumni-img img {
@@ -313,8 +380,6 @@
         .alumni-title {
             margin-top: -2.5rem;
         }
-
-
     }
 
     .welcome-main {
@@ -324,14 +389,60 @@
 
     .post-btn,
     .change-btn {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .media-text,
     p,
     .card-text,
     .comment-btn {
-        font-size: 12px;
+        font-size: 14px;
+    }
+
+    .header.login-header,
+    .header.welcome-header,
+    .header.forgot-header {
+        position: static !important;
+
+        .brand {
+            img {
+                width: 60%;
+            }
+        }
+
+        .alu-text {
+            font-size: 1rem !important;
+        }
+    }
+
+    .form-control {
+        border-radius: 2px;
+    }
+
+    .register-text {
+        font-size: 15px;
+        text-align: center !important;
+        margin-bottom: 1.5rem !important;
+        margin-left: 0 !important;
+    }
+
+
+    .header.reg-header {
+        position: static !important;
+
+        .brand {
+            img {
+                width: 40%;
+            }
+        }
+    }
+
+    .footer {
+        .left-side {
+            img {
+                margin: 0 auto;
+            }
+        }
     }
 }
 
@@ -433,6 +544,8 @@
 }
 
 .footer {
+    overflow: hidden;
+
     .left-side {
         display: flex;
         align-items: center;
@@ -441,24 +554,60 @@
     }
 }
 
-@media(min-width: 768px) and (max-width: 1080px) {
+@media(min-width: 768px) and (max-width: 1024px) {
     .reg-main {
-        // max-height: 100vh;
-
         .reg-box {
             width: 100%;
         }
     }
-}
 
-@media(max-width: 640px) {
-    .reg-main {
-        min-height: 250vh;
+    .register-form {
+        border: none !important;
+
+        .imag {
+            display: inline-block;
+
+            img {
+                width: 70px !important;
+                height: 70px !important;
+            }
+        }
+
+
+        .register-title {
+            text-align: left !important;
+            margin-left: 1rem;
+            font-size: 1rem !important;
+        }
+
+        .rig {
+            margin-left: 0 !important;
+            margin-top: -2rem !important;
+            text-align: left !important;
+
+            .register-text {
+                font-size: 13px;
+                text-align: left !important;
+            }
+
+            .register-title {
+                text-align: left !important;
+                margin-left: 1rem;
+                font-size: 1.2rem !important;
+                margin-top: -1rem !important;
+            }
+        }
     }
 }
 
-@media(max-width: 600px) {
-    .reg-main {
-        min-height: 200vh;
+@media (max-width: 414px) {
+    .register-form {
+        &-title {
+            font-size: 1rem !important;
+        }
+
+        &-text {
+            margin-bottom: 0 !important;
+        }
     }
 }

@@ -17,7 +17,7 @@
 
 <body>
     <!-- HEADER SECTION START -->
-    <header class="header">
+    <header class="header reg-header">
         <div class="container">
             <a href="index.html" class="brand">
                 <img src="assets/images/brand.svg" alt="">
@@ -31,35 +31,27 @@
         <div class="overlay">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 d-none d-lg-block">
+                    <div class="col-md-3 d-none d-xl-block">
                         <div class="alumni-img">
                             <img src="assets/images/alumniIcon.svg" alt="">
                         </div>
                     </div>
-                    <div class="col-md-8 reg-box">
-                        <header class="form-header d-md-none d-flex">
-                            <div class="form-header-left">
-                                <img src="assets/images/alumniIcon.svg" alt="alumni-logo" class="form-header-left-img">
-                            </div>
-
-                            <div class="form-header-right">
-                                <h4 class="form-header-right-title">Alumni Sign up</h4>
-
-                                <span class="form-header-right-text mb-2">
-                                    Please fill in this form to create an account
-                                </span>
-                            </div>
-                        </header>
-
+                    <div class="col-md-8 reg-box w-xl-100">
                         <!-- REGISTER SECTION START -->
                         <form class="register-form">
-                            <h4 class="register-title d-none d-lg-block">Alumni Sign up</h4>
 
-                            <span class="register-text d-none d-lg-block mb-2">
-                                Please fill in this form to create an account
-                            </span>
+                            <div class="d-flex align-items-baseline mb-4">
+                                <div class="imag d-lg-none d-block">
+                                    <img src="assets/images/alumniIcon.svg" alt="">
+                                </div>
+                                <div class="rig">
+                                    <h4 class="register-title">Alumni Sign up</h4>
 
-
+                                    <span class="register-text mb-2">
+                                        Please fill in this form to create an account
+                                    </span>
+                                </div>
+                            </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -130,6 +122,8 @@
                                             <span class="icon-password"></span>
                                         </span>
                                         <input type="password" class="form-control" placeholder="Password*">
+                                        <img src="assets/images/password.svg" class="pass" width="25" height="16"
+                                            alt="">
                                     </div>
                                 </div>
 
@@ -139,6 +133,8 @@
                                             <span class="icon-password"></span>
                                         </span>
                                         <input type="password" class="form-control" placeholder="Confirm Password*">
+                                        <img src="assets/images/password.svg" class="pass" width="25" height="16"
+                                            alt="">
                                     </div>
                                 </div>
                             </div>
@@ -154,10 +150,14 @@
                             <div class="form-group d-flex justify-content-end">
                                 <button class="register-btn" type="submit">Register</button>
                             </div>
+
+                            <p class="register-txt text-white mt-4 text-center d-lg-none d-block">
+                                Already have an account? <a href="login.html">Login here</a>.
+                            </p>
                         </form>
                         <!-- REGISTER SECTION END -->
 
-                        <p class="register-txt text-white mt-4 text-center">
+                        <p class="register-txt text-white mt-4 text-center d-none d-lg-block">
                             Already have an account? <a href="login.html">Login here</a>.
                         </p>
                     </div>

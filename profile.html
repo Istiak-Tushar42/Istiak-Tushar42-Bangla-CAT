@@ -85,7 +85,7 @@
                     </li>
                     <li class="nav-item d-lg-none d-block menu-icon">
                         <a href="javascript:void(0)" class="nav-link">
-                            <i class="fas fa-align-right"></i>
+                            <i class="fas fa-bars"></i>
                         </a>
                     </li>
                 </ul>
@@ -271,99 +271,167 @@
                         </h3>
 
                         <form class="profile-form">
-                            <div class="drag-area">
-                                <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
-                                <header>Drop files to Upload</header>
-                                <span>or</span>
-                                <button>Browse File</button>
-                                <input type="file" hidden>
-                            </div>
-
-                            <div class="form-group mb-3">
-                                <label for="current-city" class="mb-2">Current City</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="home-town" class="mb-2">Home Town</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group d-flex mb-3">
-                                <label for="gender">I am: &nbsp;</label>
-
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                        Male
-                                    </label>
-                                    &nbsp;
+                            <div class="row group group1">
+                                <div class="col-1">
+                                    <div class="title">
+                                        <h5><span>Profile Image</span></h5>
+                                    </div>
                                 </div>
 
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                        id="flexRadioDefault2" checked>
-                                    <label class="form-check-label" for="flexRadioDefault2">
-                                        female
-                                    </label>
+                                <div class="form-group mb-3 col-5 mx-sm-auto mx-md-0">
+                                    <div class="form-drag">
+                                        <div class="drag-area">
+                                            <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                            <header>Drop files to Upload</header>
+                                            <div class="d-flex justify-content-center">
+                                                <span>or</span>
+                                                <button>browse</button>
+                                            </div>
+                                            <input type="file" hidden>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group mb-3 d-none d-lg-block  col-5">
+                                    <label for="current-city" class="mb-2">Choose from your device</label>
+                                    <input type="file" class="form-control-file ml-2">
                                 </div>
                             </div>
 
-                            <div class="form-group mb-3">
-                                <label for="dob" class="mb-2">Date of Birth</label>
-                                <input id="datepicker" placeholder="10/11/1995" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="about" class="mb-2">About Me</label>
-                                <textarea rows="4" class="form-control"></textarea>
+                            <div class="row group group2">
+                                <div class="row">
+                                    <div class="col-1">
+                                        <div class="title">
+                                            <h5><span>Basic Information</span></h5>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-11">
+                                        <div class="row">
+                                            <div class="form-group d-flex align-items-center mb-3">
+                                                <label for="current-city" class="mb-2 col-3">Current City:</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                            <div class="form-group d-flex align-items-center mb-3">
+                                                <label for="home-town" class="mb-2 col-3">Home Town:</label>
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group d-flex align-items-center mb-3">
+                                            <label for="gender">I am: &nbsp;</label>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault1">
+                                                <label class="form-check-label" for="flexRadioDefault1">
+                                                    Male
+                                                </label>
+                                                &nbsp;
+                                            </div>
+
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                    id="flexRadioDefault2" checked>
+                                                <label class="form-check-label" for="flexRadioDefault2">
+                                                    female
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group d-flex align-items-center mb-3">
+                                            <label for="dob" class="mb-2 col-3">Date of Birth:</label>
+                                            <input id="datepicker" placeholder="10/11/1995" class="form-control col-9">
+                                        </div>
+
+                                        <div class="form-group d-flex align-items-center mb-3">
+                                            <label for="about" class="mb-2 col-3">About Me:</label>
+                                            <textarea rows="4" class="form-control"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group mb-3">
-                                <label for="organization" class="mb-2">
-                                    Organization <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="designation" class="mb-2">
-                                    Designation <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="division" class="mb-2">
-                                    Division <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="start" class="mb-2">Start Date <span>*</span></label>
-                                <input id="datepicker2" placeholder="10/11/1995" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="end" class="mb-2">End Date <span>*</span></label>
-                                <input id="datepicker3" placeholder="10/11/1995" class="form-control">
+                            <div class="group group3 row">
+                                <div class="col-1">
+                                    <div class="title">
+                                        <h5><span>Professional Experiences</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-11">
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="organization" class="mb-2 col-3">
+                                            Organization <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="designation" class="mb-2 col-3">
+                                            Designation <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="division" class="mb-2 col-3">
+                                            Division <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="start" class="mb-2 col-3">Start Date <span>*</span></label>
+                                        <input id="datepicker2" placeholder="10/11/1995" class="form-control">
+                                    </div>
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="end" class="mb-2 col-3">End Date <span>*</span></label>
+                                        <input id="datepicker3" placeholder="10/11/1995" class="form-control">
+                                    </div>
+                                    <div class="form-check d-flex row align-items-center mb-3">
+                                        <label class="form-check-label col-4" for="flexCheckDefault">
+                                            On Going
+                                        </label>
+                                        <input class="form-check-input px-0" type="checkbox" value=""
+                                            id="flexCheckDefault">
+                                    </div>
+                                    <div class="form-group d-flex justify-content-end mb-3">
+                                        <button class="add-more">Add More</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group mb-3">
-                                <label for="degree" class="mb-2">
-                                    Degree Name <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
+                            <div class="group group4 row">
+                                <div class="col-1">
+                                    <div class="title">
+                                        <h5><span>Educational Experiences</span></h5>
+                                    </div>
+                                </div>
+                                <div class="col-11">
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="degree" class="mb-2 col-3">
+                                            Degree Name <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="institution" class="mb-2 col-3">
+                                            Institution <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <div class="form-group d-flex align-items-center mb-3">
+                                        <label for="ending" class="mb-2 col-3">
+                                            Ending Year <span>*</span>
+                                        </label>
+                                        <input type="text" class="form-control">
+                                    </div>
+
+                                    <div class="form-group d-flex justify-content-end mb-3">
+                                        <button class="add-more">Add More</button>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="form-group mb-3">
-                                <label for="institution" class="mb-2">
-                                    Institution <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
-                            </div>
-
-                            <div class="form-group mb-3">
-                                <label for="ending" class="mb-2">
-                                    Ending Year <span>*</span>
-                                </label>
-                                <input type="text" class="form-control">
-                            </div>
 
                             <div class="form-group d-flex justify-content-end">
                                 <button class="change-btn" type="submit">Save Changes</button>

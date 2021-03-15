@@ -379,12 +379,17 @@ textarea {
   padding: .5rem 0;
   font-family: "Univers";
   border-bottom: solid 0.5rem #fcb415;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
 }
 
 .header .alu-text {
   font-family: "Univers-Light-Normal";
   font-weight: 600;
-  font-size: 26px;
+  font-size: 32px;
   text-align: left;
   color: #fcb415;
   margin-left: 10px;
@@ -725,6 +730,7 @@ textarea {
 .main-section {
   background: #1f1f1f;
   padding: 1.5rem 0;
+  margin-top: 75px;
   /* SIDEBAR */
   /* MIDDLE CONTENT */
   /* RIGHT CONTENT */
@@ -735,9 +741,19 @@ textarea {
   padding: 1.2rem 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 75px;
   overflow-y: scroll;
-  max-height: 100vh;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .main-section .sidebar .sidebar-img {
@@ -851,6 +867,7 @@ textarea {
   background: #F2F2F2;
   min-height: 100%;
   background: white;
+  overflow: hidden;
   /* POST FORM */
   /* POSTS */
   /* PROFILE FORM */
@@ -864,7 +881,7 @@ textarea {
 
 .main-section .content-middle .post-form {
   background: #F2F2F2;
-  padding: 1rem;
+  padding: 75px 1rem 1rem;
 }
 
 .main-section .content-middle .post-form .form-control {
@@ -1748,7 +1765,7 @@ textarea {
 .main-section .right-content {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  top: 75px;
 }
 
 .main-section .right-content .right-head {
@@ -1942,6 +1959,7 @@ textarea {
 .reg-main {
   background: url(../images/background.svg) no-repeat center center/cover;
   position: relative;
+  margin-top: 75px;
 }
 
 .reg-main .overlay {
@@ -1959,6 +1977,7 @@ textarea {
   margin-top: 2.5rem;
   padding: 1.75rem;
   font-family: "Univers-Light-Normal";
+  position: relative;
   z-index: 1;
 }
 
@@ -1969,6 +1988,79 @@ textarea {
   text-align: left !important;
   color: #ffffff;
   text-align: center;
+}
+
+.reg-main .register-form .privacy-title {
+  font-family: "Univers-Light-Normal";
+  font-weight: bold;
+  font-size: 25px;
+  text-align: left !important;
+  color: #fcb415;
+  text-align: center;
+}
+
+.reg-main .register-form .privacy-text {
+  font-family: "Univers-Light-Normal";
+  font-weight: 500;
+  font-size: 17px !important;
+  text-align: left;
+  color: #A3A3A3;
+  display: block;
+  text-align: center;
+}
+
+.reg-main .register-form .slider {
+  position: relative;
+}
+
+.reg-main .register-form .slider .single-item p {
+  text-align: justify;
+  padding: 1rem;
+}
+
+.reg-main .register-form .slider .slick-prev {
+  top: auto;
+  bottom: -25px;
+  left: auto;
+  right: 50px;
+  background: #fcb415;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+  color: white;
+  font-size: 15px;
+}
+
+.reg-main .register-form .slider .slick-prev i {
+  font-size: 1rem;
+}
+
+.reg-main .register-form .slider .slick-prev::before {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: bold;
+}
+
+.reg-main .register-form .slider .slick-next {
+  top: auto;
+  bottom: -25px;
+  right: 0;
+  background: #fcb415;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.reg-main .register-form .slider .slick-next::before {
+  position: absolute;
+  left: 20%;
+  top: 15%;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: bold;
 }
 
 .reg-main .register-form .register-text {
@@ -2100,10 +2192,6 @@ textarea {
 /** RESPONSIVE DESIGN START HERE */
 @media (max-width: 768px) {
   .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
     border-width: .25rem;
   }
   .header .responsive-menu .brand {
@@ -2451,6 +2539,7 @@ textarea {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  top: 0;
 }
 
 .mobile-menu .sidebar .top-nav {
@@ -2527,6 +2616,15 @@ textarea {
 
 .mobile-menu.show {
   left: 0;
+  z-index: 123;
+}
+
+.main-section {
+  margin-top: 0;
+}
+
+.reg-main {
+  margin-top: 0;
 }
 
 .footer {
@@ -2547,6 +2645,9 @@ textarea {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .reg-main {
+    margin-top: 0;
+  }
   .reg-main .reg-box {
     width: 100%;
   }
@@ -2566,7 +2667,7 @@ textarea {
     font-size: 1rem !important;
   }
   .register-form .rig {
-    margin-left: 0 !important;
+    margin-left: 1rem !important;
     margin-top: -2rem !important;
     text-align: left !important;
   }

@@ -1,9 +1,5 @@
 @media(max-width: 768px) {
     .header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1;
         border-width: .25rem;
 
         .responsive-menu {
@@ -464,6 +460,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        top: 0;
 
 
         .top-nav {
@@ -541,6 +538,15 @@
 
 .mobile-menu.show {
     left: 0;
+    z-index: 123;
+}
+
+.main-section {
+    margin-top: 0;
+}
+
+.reg-main {
+    margin-top: 0;
 }
 
 .footer {
@@ -556,6 +562,8 @@
 
 @media(min-width: 768px) and (max-width: 1024px) {
     .reg-main {
+        margin-top: 0;
+
         .reg-box {
             width: 100%;
         }
@@ -581,7 +589,7 @@
         }
 
         .rig {
-            margin-left: 0 !important;
+            margin-left: 1rem !important;
             margin-top: -2rem !important;
             text-align: left !important;
 

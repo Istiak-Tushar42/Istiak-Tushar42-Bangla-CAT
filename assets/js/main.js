@@ -1,3 +1,27 @@
+
+if($('.slider').length > 0) {
+    $('.slider').slick({
+        infinite: true,
+        slideToShow:3,
+        slideToScroll:1
+    });
+}
+
+// const prevBtn = document.querySelector('.slick-prev');
+// const nxtBtn = document.querySelector('.slick-next');
+
+// prevBtn.textContent = '';
+// nxtBtn.textContent = '';
+
+// const i = document.createElement('i');
+// const i2 = document.createElement('i');
+
+// i.className = 'fas fa-arrow-left';
+// i2.className = 'fas fa-arrow-right';
+
+// prevBtn.appendChild(i);
+// nxtBtn.appendChild(i2);
+
 /** MOBILE MENU SHOW HIDE */
 const menuIcon = document.querySelector('.menu-icon');
 const mobileMenu = document.querySelector('.mobile-menu');

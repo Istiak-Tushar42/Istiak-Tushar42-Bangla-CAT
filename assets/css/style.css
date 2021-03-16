@@ -2250,8 +2250,9 @@ textarea {
     font-size: 13px;
   }
   .main-section .sidebar {
-    min-height: 100vh;
-    z-index: 12345 !important;
+    height: 100vh;
+    max-height: 100vh;
+    z-index: 12345;
   }
   .main-section .content-middle {
     height: 100%;
@@ -2660,6 +2661,11 @@ textarea {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    z-index: 12345;
+  }
   .reg-main {
     margin-top: 0;
   }

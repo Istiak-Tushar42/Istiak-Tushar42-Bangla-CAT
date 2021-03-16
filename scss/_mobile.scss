@@ -61,11 +61,18 @@
     }
 
     .main-section {
-        margin-top: 80px;
+        // margin-top: 80px;
+
+        .sidebar {
+            min-height: 100vh;
+            z-index: 12345 !important;
+        }
 
         .content-middle {
             height: 100%;
             overflow-y: hidden;
+            padding-top: 0;
+            padding-top: 50px;
 
             .account-title {
                 justify-content: center;
@@ -150,6 +157,7 @@
         .right-content {
             height: 100%;
             overflow-y: hidden;
+            margin-top: 40px;
 
             .right-head {
                 margin-top: 1.5rem;

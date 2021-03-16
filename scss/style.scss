@@ -151,6 +151,7 @@ $primary-color: #fcb415;
         justify-content: center;
         padding: 1rem;
         margin-top: 2.5rem;
+        margin-top: 110px;
 
         .alumni-img {
             width: 100px;
@@ -333,6 +334,8 @@ $primary-color: #fcb415;
         justify-content: center;
         padding: 1rem 0;
         margin-top: 3rem;
+        margin-top: 110px;
+        padding: 1rem;
 
         .forgot-title {
             font-size: 2.5rem;
@@ -381,12 +384,13 @@ $primary-color: #fcb415;
     /* SIDEBAR */
     .sidebar {
         background: $white;
-        // height: 100%;
         padding: 1.2rem 0;
-        position: sticky;
+        position: fixed;
+        overflow: hidden;
         top: 75px;
         overflow-y: scroll;
-        min-height: 100vh;
+        height: 100%;
+        max-height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -502,6 +506,7 @@ $primary-color: #fcb415;
         background: white;
         // max-height: 100vh;
         overflow: hidden;
+        padding-top: 45px;
 
         .account-title {
             padding-top: 1rem;
@@ -1386,8 +1391,7 @@ $primary-color: #fcb415;
 
     /* RIGHT CONTENT */
     .right-content {
-        position: sticky;
-        top: 75px;
+        margin-top: 55px;
 
         .right-head {
             margin-bottom: 1.5rem;
@@ -1621,13 +1625,15 @@ $primary-color: #fcb415;
     background: url(../images/background.svg) no-repeat center center/cover;
     position: relative;
     margin-top: 75px;
+    overflow-y: scroll;
+    min-height: 100vh;
 
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 120%;
     }
 
     .register-form {
@@ -1638,7 +1644,7 @@ $primary-color: #fcb415;
         padding: 1.75rem;
         font-family: $secondary-font;
         position: relative;
-
+        margin-top: 110px;
         z-index: 1;
 
         .register-title {
@@ -1830,6 +1836,10 @@ $primary-color: #fcb415;
     padding: 16px;
     font-weight: 600;
     border-top: solid .25rem $primary-color;
+    position: sticky;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 1;
 
     .left-side {
 

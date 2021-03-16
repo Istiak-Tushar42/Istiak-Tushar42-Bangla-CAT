@@ -7,11 +7,15 @@ if($('.slider').length > 0) {
     });
 }
 
-// const prevBtn = document.querySelector('.slick-prev');
-// const nxtBtn = document.querySelector('.slick-next');
+const prevBtn = document.querySelector('.slick-prev');
+const nxtBtn = document.querySelector('.slick-next');
 
-// prevBtn.textContent = '';
-// nxtBtn.textContent = '';
+console.log(prevBtn);
+console.log('hello');
+
+prevBtn.textContent = '';
+nxtBtn.textContent = '';
+
 
 // const i = document.createElement('i');
 // const i2 = document.createElement('i');
@@ -80,3 +84,4 @@ if($('#datepicker3').length > 0) {
         iconsLibrary: 'materialicons'
     });
 }
+

@@ -7,14 +7,6 @@ if($('.slider').length > 0) {
     });
 }
 
-const prevBtn = document.querySelector('.slick-prev');
-const nxtBtn = document.querySelector('.slick-next');
-
-console.log(prevBtn);
-console.log('hello');
-
-prevBtn.textContent = '';
-nxtBtn.textContent = '';
 
 
 // const i = document.createElement('i');
@@ -43,6 +35,16 @@ function showMobileMenu() {
 function hideMobileMenu() {
     mobileMenu.classList.remove('show');
 }
+
+const prevBtn = document.querySelector('.slick-prev');
+const nxtBtn = document.querySelector('.slick-next');
+
+// console.log(prevBtn);
+// console.log('hello');
+
+prevBtn.textContent = '';
+nxtBtn.textContent = '';
+
 
 // HIDE m-menu on outside click
 window.addEventListener('click', e => {

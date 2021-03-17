@@ -139,6 +139,9 @@ $primary-color: #fcb415;
         height: 100%;
         background: rgba(0, 0, 0, 0.9);
         z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .login-details {
@@ -379,7 +382,7 @@ $primary-color: #fcb415;
 .main-section {
     background: #1f1f1f;
     padding: 1.5rem 0;
-    margin-top: 75px;
+    // margin-top: 75px;
 
     /* SIDEBAR */
     .sidebar {
@@ -388,13 +391,13 @@ $primary-color: #fcb415;
         position: fixed;
         overflow: hidden;
         top: 75px;
-        overflow-y: scroll;
-        // min-height: 100vh;
-        max-height: 500px;
+        min-height: 100vh;
+        width: 300px;
 
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-bottom: 10rem;
 
         .sidebar-img {
             display: flex;
@@ -461,33 +464,31 @@ $primary-color: #fcb415;
 
         .nav {
             .nav-item {
+                border-bottom: solid 1.5px #e4e4e4 !important;
+
                 .nav-link {
                     font-family: $secondary-font;
                     font-weight: 500;
                     font-size: 1rem;
                     color: #b4b4b4;
                     transition: all .5s ease-in-out;
-                    border-bottom: solid 1.5px #e4e4e4;
+                    border-bottom: solid 1.5px #e4e4e4 !important;
 
                     &:last-child {
-                        border-bottom: 0;
+                        border-bottom: none !important;
                     }
 
                     .nav-text {
                         margin-left: .5rem;
                     }
 
-                    .icon-user1,
-                    .icon-user2,
-                    .icon-star,
-                    .icon-settings,
-                    .icon-logout {
-                        font-size: 1.1rem;
-                    }
-
                     &:hover {
                         color: $primary-color
                     }
+                }
+
+                &:last-child {
+                    border-bottom: 0 !important;
                 }
             }
 
@@ -517,7 +518,7 @@ $primary-color: #fcb415;
         /* POST FORM */
         .post-form {
             background: #F2F2F2;
-            padding: 75px 1rem 1rem;
+            padding: 1rem;
 
             .form-control {
                 resize: none;
@@ -576,6 +577,7 @@ $primary-color: #fcb415;
                                 margin-top: 1rem;
                                 font-family: $secondary-font;
                                 margin-bottom: 0;
+                                font-size: 1rem;
                             }
 
                             .media-text {
@@ -661,7 +663,7 @@ $primary-color: #fcb415;
                         border: none;
                         color: $black;
                         font-family: $secondary-font;
-                        font-size: 1rem;
+                        font-size: 15px;
                         font-weight: 500;
                         transition: all .5s ease-in-out;
 
@@ -1173,7 +1175,7 @@ $primary-color: #fcb415;
                                             background: transparent;
                                             border: none;
                                             color: $black;
-                                            font-size: 14px;
+                                            font-size: 13px;
                                         }
                                     }
 
@@ -1295,7 +1297,7 @@ $primary-color: #fcb415;
                                             background: transparent;
                                             border: none;
                                             color: $black;
-                                            font-size: 14px;
+                                            font-size: 13px;
                                         }
                                     }
 
@@ -1374,7 +1376,7 @@ $primary-color: #fcb415;
                         background: transparent;
                         border: none;
                         color: $black;
-                        font-size: 14px;
+                        font-size: 13px;
                     }
                 }
 
@@ -1393,9 +1395,16 @@ $primary-color: #fcb415;
     /* RIGHT CONTENT */
     .right-content {
         margin-top: 55px;
+        width: 100%;
+        height: 100vh;
+        position: sticky;
+        overflow: hidden;
+        top: 75px;
 
         .right-head {
             margin-bottom: 1.5rem;
+            height: 220px;
+            overflow: hidden;
 
             .card {
                 border-radius: 0;
@@ -1447,6 +1456,8 @@ $primary-color: #fcb415;
 
         .right-top {
             margin-bottom: 1.5rem;
+            overflow: hidden;
+            height: 300px;
 
             .card {
                 border: none;
@@ -1467,9 +1478,6 @@ $primary-color: #fcb415;
                 }
 
                 .card-body {
-                    max-height: 180px;
-                    overflow-y: scroll;
-                    overflow-x: hidden;
 
                     .media {
                         border-bottom: solid 1px #e4e4e4;
@@ -1525,22 +1533,27 @@ $primary-color: #fcb415;
         }
 
         .right-bottom {
+            // height: 370px;
+            overflow: hidden;
+            
+            .right-bottom-header {
+                background: white;
+                border: none;
+
+                .title {
+                    font-family: $primary-font;
+                    font-size: 17px;
+                    // padding: .5rem 1rem;
+                    text-align: left;
+                    font-weight: 600;
+                    padding: 1rem;
+                    margin-bottom: 0;
+                }
+            }
+
             .card {
                 border: none;
                 border-radius: 0;
-
-                .card-header {
-                    background: transparent;
-                    border: none;
-
-                    .card-title {
-                        font-family: $primary-font;
-                        font-size: 17px;
-                        // padding: .5rem 1rem;
-                        text-align: left;
-                        font-weight: 600;
-                    }
-                }
 
                 .card-img {
                     overflow: hidden;
@@ -1584,41 +1597,6 @@ $primary-color: #fcb415;
                 }
             }
         }
-
-        // .top-animation {
-        //     // position: absolute;
-        //     overflow: hidden;
-
-        //     animation: marquee 5s linear infinite;
-        // }
-
-        // @keyframes marquee {
-        //     0% {
-        //         top: 0;
-        //     }
-
-        //     100% {
-        //         top: -100%;
-        //     }
-        // }
-
-        // .down-animation {
-        //     animation: vlt_marquee 5s linear infinite;
-        //     animation-duration: 9.8587s;
-        //     overflow: hidden;
-        // }
-
-        // // @keyframes vlt_marquee {
-        // //     @keyframes marquee {
-        // //         0% {
-        // //             left: 0;
-        // //         }
-
-        // //         100% {
-        // //             left: -100%;
-        // //         }
-        // //     }
-        // // }
     }
 }
 
@@ -1626,15 +1604,21 @@ $primary-color: #fcb415;
     background: url(../images/background.svg) no-repeat center center/cover;
     position: relative;
     margin-top: 75px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
     min-height: 100vh;
+    overflow: hidden;
+    padding-top: 200px;
+    
 
     .overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 120%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .register-form {
@@ -1697,7 +1681,7 @@ $primary-color: #fcb415;
                 border-radius: 50%;
                 z-index: 1;
                 color: white;
-                font-size: 15px;
+                font-size: 0;
 
                 i {
                     font-size: 1rem;
@@ -1722,6 +1706,7 @@ $primary-color: #fcb415;
                 padding: 1rem;
                 border-radius: 50%;
                 z-index: 1;
+                font-size: 0;
 
                 &::before {
                     // content: '';
@@ -1825,6 +1810,10 @@ $primary-color: #fcb415;
                 text-decoration: underline;
             }
         }
+    }
+
+    .slick-arrow {
+        font-size: 0;
     }
 }
 

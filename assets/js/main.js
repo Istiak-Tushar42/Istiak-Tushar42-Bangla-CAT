@@ -42,8 +42,8 @@ const nxtBtn = document.querySelector('.slick-next');
 // console.log(prevBtn);
 // console.log('hello');
 
-prevBtn.textContent = '';
-nxtBtn.textContent = '';
+// prevBtn.textContent = '';
+// nxtBtn.textContent = '';
 
 
 // HIDE m-menu on outside click

@@ -462,6 +462,7 @@ textarea {
   background: url(../images/background.svg) no-repeat center center/cover;
   height: 100vh;
   position: relative;
+  overflow-y: hidden;
 }
 
 .main .overlay {
@@ -501,8 +502,6 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
-  margin-top: 2.5rem;
-  margin-top: 110px;
 }
 
 .main .login-details .alumni-img {
@@ -521,7 +520,7 @@ textarea {
   font-size: 43px;
   text-align: center;
   color: #ffffff;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .main .login-details .login-form .form-control {
@@ -1792,6 +1791,10 @@ textarea {
   overflow: hidden;
 }
 
+.main-section .right-content .right-head marquee {
+  height: 220px;
+}
+
 .main-section .right-content .right-head .card {
   border-radius: 0;
 }
@@ -1842,6 +1845,10 @@ textarea {
 .main-section .right-content .right-top {
   margin-bottom: 1.5rem;
   overflow: hidden;
+  height: 300px;
+}
+
+.main-section .right-content .right-top marquee {
   height: 300px;
 }
 
@@ -1915,7 +1922,12 @@ textarea {
 }
 
 .main-section .right-content .right-bottom {
+  height: 315px;
   overflow: hidden;
+}
+
+.main-section .right-content .right-bottom marquee {
+  height: 315px;
 }
 
 .main-section .right-content .right-bottom .right-bottom-header {
@@ -1984,7 +1996,6 @@ textarea {
   margin-top: 75px;
   min-height: 100vh;
   overflow: hidden;
-  padding-top: 200px;
 }
 
 .reg-main .overlay {
@@ -2008,12 +2019,12 @@ textarea {
   border-radius: 25px;
   background: rgba(0, 0, 0, 0.4);
   border: 3px solid #fcb415;
-  margin-top: 2.5rem;
-  padding: 1.75rem;
+  margin-top: 6rem;
+  padding: 1rem 1.75rem;
   font-family: "Univers-Light-Normal";
   position: relative;
-  margin-top: 110px;
   z-index: 1;
+  overflow: hidden;
 }
 
 .reg-main .register-form .register-title {
@@ -2050,12 +2061,12 @@ textarea {
 
 .reg-main .register-form .slider .single-item p {
   text-align: justify;
-  padding: 1rem;
+  padding: 0;
 }
 
 .reg-main .register-form .slider .slick-prev {
   top: auto;
-  bottom: -25px;
+  bottom: 0;
   left: auto;
   right: 50px;
   background: #fcb415;
@@ -2081,7 +2092,7 @@ textarea {
 
 .reg-main .register-form .slider .slick-next {
   top: auto;
-  bottom: -25px;
+  bottom: 0;
   right: 0;
   background: #fcb415;
   padding: 1rem;
@@ -2192,6 +2203,10 @@ textarea {
   font-size: 0;
 }
 
+.reg-hei {
+  max-height: 90vh;
+}
+
 /** MAIN SECTION END */
 /** FOOTER SECTION START */
 .footer {
@@ -2235,9 +2250,26 @@ textarea {
 
 /** FOOTER SECTION END*/
 /** RESPONSIVE DESIGN START HERE */
+@media (min-width: 991px) and (max-width: 1200px) {
+  .main-section .sidebar {
+    max-height: 500px !important;
+    overflow-y: scroll;
+    width: 250px;
+    z-index: 1;
+  }
+  .footer {
+    z-index: 125;
+  }
+}
+
 @media (max-width: 768px) {
   .header {
     border-width: .25rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
   }
   .header .responsive-menu .brand {
     margin: .5rem 0 .5rem;
@@ -2283,118 +2315,9 @@ textarea {
   .header .alu-text {
     font-size: 13px;
   }
-  .main-section .sidebar {
-    height: 100vh;
-    max-height: 100vh;
-    z-index: 12345;
-  }
-  .main-section .content-middle {
-    height: 100%;
-    overflow-y: hidden;
-    padding-top: 0;
-    padding-top: 50px;
-  }
-  .main-section .content-middle .account-title {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-top: 1rem;
-  }
-  .main-section .content-middle .profile-form {
-    min-height: 100%;
-  }
-  .main-section .content-middle .posts .card .card-body .card-text {
-    font-size: 14px;
-  }
-  .main-section .content-middle .posts .card .card-body .comment-btn {
-    font-size: 14px;
-  }
-  .main-section .content-middle .multi .card .card-header .media {
-    margin-left: 0;
-  }
-  .main-section .content-middle .multi .card .card-header .media .media-body .media-title {
-    font-size: 14px;
-  }
-  .main-section .content-middle .multi .card .card-header .media .media-body .body-content .body-text {
-    font-size: 14px !important;
-  }
-  .main-section .content-middle .multi .card .card-body {
-    padding-left: 4.7rem;
-  }
-  .main-section .content-middle .multi .card .card-footer {
-    margin-bottom: 2rem;
-  }
-  .main-section .content-middle .multi .card:nth-child(2) {
-    margin-bottom: 1.2rem;
-  }
-  .main-section .content-middle .multi .card:last-child {
-    margin-bottom: 1.2rem;
-  }
-  .main-section .content-middle .card .card-header small {
-    font-size: 14px;
-  }
-  .main-section .content-middle .profile-form .drag-area header,
-  .main-section .content-middle .profile-form .drag-area button {
-    font-size: 14px;
-  }
-  .main-section .right-content {
-    height: 100%;
-    overflow-y: hidden;
-    margin-top: 40px;
-  }
-  .main-section .right-content .right-head {
-    margin-top: 1.5rem;
-  }
-  .main-section .right-content .right-top .card .card-header {
-    padding: 0;
-  }
-  .main-section .right-content .right-top .card .card-header .card-title {
-    font-size: 1rem;
-    padding: .6rem 0;
-    background: #F7F700;
-    text-align: center;
-  }
-  .main-section .right-content .right-top .card .card-body .media .media-body .media-text {
-    font-size: 12px;
-  }
-  .main-section .right-content .right-bottom .card .card-body .card-text {
-    font-size: 14px;
-  }
-  .main-section .form-group label {
-    font-size: 14px;
-  }
-  .main .overlay {
-    height: 100%;
-    margin-bottom: 2rem;
-  }
-  .main .login-details {
-    margin: 100px 0 0;
-    padding: 0;
-  }
-  .main .login-details .alumni-title {
-    font-size: 1.75rem;
-  }
-  .main .forgot-details .forgot-title {
-    font-size: 1.75rem;
-  }
-  .main .forgot-details .forgot-text {
-    font-size: 14px;
-  }
-  .main .alumni-img img {
-    width: 100px;
-    height: 100px;
-  }
-  .main .welcome .welcome-title {
-    font-size: 1.75rem;
-  }
-  .main .welcome .welcome-text {
-    font-size: 14px;
-  }
-  .main .welcome .welcome-text .success {
-    font-size: 18px;
-  }
   .reg-main {
-    max-height: 100vh;
+    overflow: hidden;
+    margin-top: 2rem !important;
   }
   .reg-main .form-header {
     display: -webkit-box;
@@ -2419,6 +2342,7 @@ textarea {
     border: none;
     margin-top: 0;
     max-height: 100vh;
+    overflow-y: scroll;
   }
   .reg-main .register-form .register-title {
     font-size: 1.25rem;
@@ -2504,6 +2428,137 @@ textarea {
   .reg-main .register-txt {
     font-size: 14px;
   }
+  .main-section .sidebar {
+    height: 100vh;
+    max-height: 100vh;
+    z-index: 12345;
+  }
+  .main-section .content-middle {
+    height: 100%;
+    overflow-y: hidden;
+    padding-top: 0;
+    padding-top: 50px;
+  }
+  .main-section .content-middle .account-title {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 1rem;
+  }
+  .main-section .content-middle .profile-form {
+    min-height: 100%;
+  }
+  .main-section .content-middle .post-form {
+    padding-top: 1.5rem;
+  }
+  .main-section .content-middle .posts .card .card-body .card-text {
+    font-size: 14px;
+  }
+  .main-section .content-middle .posts .card .card-body .comment-btn {
+    font-size: 14px;
+  }
+  .main-section .content-middle .multi .card .card-header .media {
+    margin-left: 0;
+  }
+  .main-section .content-middle .multi .card .card-header .media .media-body .media-title {
+    font-size: 14px;
+  }
+  .main-section .content-middle .multi .card .card-header .media .media-body .body-content .body-text {
+    font-size: 14px !important;
+  }
+  .main-section .content-middle .multi .card .card-body {
+    padding-left: 4.7rem;
+  }
+  .main-section .content-middle .multi .card .card-footer {
+    margin-bottom: 2rem;
+  }
+  .main-section .content-middle .multi .card:nth-child(2) {
+    margin-bottom: 1.2rem;
+  }
+  .main-section .content-middle .multi .card:last-child {
+    margin-bottom: 1.2rem;
+  }
+  .main-section .content-middle .card .card-header small {
+    font-size: 14px;
+  }
+  .main-section .content-middle .profile-form .drag-area header,
+  .main-section .content-middle .profile-form .drag-area button {
+    font-size: 14px;
+  }
+  .main-section .right-content {
+    height: 100%;
+    overflow-y: hidden;
+    margin-top: 40px;
+  }
+  .main-section .right-content .right-head {
+    margin-top: 1.5rem;
+  }
+  .main-section .right-content .right-top .card .card-header {
+    padding: 0;
+  }
+  .main-section .right-content .right-top .card .card-header .card-title {
+    font-size: 1rem;
+    padding: .6rem 0;
+    background: #F7F700;
+    text-align: center;
+  }
+  .main-section .right-content .right-top .card .card-body .media .media-body .media-text {
+    font-size: 12px;
+  }
+  .main-section .right-content .right-bottom .card .card-body .card-text {
+    font-size: 14px;
+  }
+  .main-section .form-group label {
+    font-size: 14px;
+  }
+  .single-item p {
+    padding-bottom: 1rem;
+  }
+  .main-sec {
+    margin-top: 0;
+  }
+  .main {
+    max-height: 75vh !important;
+  }
+  .main .overlay {
+    height: 100%;
+  }
+  .main .login-details {
+    margin: 60px 0 0;
+    padding: 0;
+  }
+  .main .login-details .alumni-title {
+    font-size: 1.75rem;
+  }
+  .main .forgot-details .forgot-title {
+    font-size: 1.75rem;
+  }
+  .main .forgot-details .forgot-text {
+    font-size: 14px;
+  }
+  .main .alumni-img img {
+    width: 80px;
+    height: 80px;
+  }
+  .main .welcome .welcome-title {
+    font-size: 1.75rem;
+  }
+  .main .welcome .welcome-text {
+    font-size: 14px;
+  }
+  .main .welcome .welcome-text .success {
+    font-size: 18px;
+  }
+  .welcome-main {
+    height: 480px;
+  }
+  .welcome-main .welcome-img {
+    margin-top: 1rem;
+  }
+  .welcome-main .welcome-img img {
+    width: 80px;
+    height: 80px;
+  }
   .main-sec .alumni {
     padding: 1.5rem 0;
   }
@@ -2511,11 +2566,7 @@ textarea {
     margin-top: -150%;
   }
   .main-sec .alumni-title {
-    margin-top: -2.5rem;
-  }
-  .welcome-main {
-    height: 100vh;
-    max-height: 100vh !important;
+    margin-top: -4.5rem;
   }
   .post-btn,
   .change-btn {
@@ -2530,7 +2581,7 @@ textarea {
   .header.login-header,
   .header.welcome-header,
   .header.forgot-header {
-    position: static !important;
+    position: fixed !important;
   }
   .header.login-header .brand img,
   .header.welcome-header .brand img,
@@ -2540,7 +2591,7 @@ textarea {
   .header.login-header .alu-text,
   .header.welcome-header .alu-text,
   .header.forgot-header .alu-text {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
   }
   .form-control {
     border-radius: 2px;
@@ -2552,13 +2603,33 @@ textarea {
     margin-left: 0 !important;
   }
   .header.reg-header {
-    position: static !important;
+    position: fixed !important;
   }
   .header.reg-header .brand img {
     width: 40%;
   }
+  .main.reg-main {
+    height: 75vh !important;
+  }
+  .reg-hei {
+    overflow-y: scroll;
+    min-height: 100vh;
+    margin-top: 0 !important;
+  }
   .footer .left-side img {
     margin: 0 auto;
+  }
+  .login-form .register-form {
+    margin-top: 3.5rem !important;
+  }
+  .register-form {
+    padding-top: 5rem !important;
+  }
+  .main-sec {
+    height: 540px !important;
+    margin-top: 40px;
+    overflow: hidden;
+    overflow-y: hidden;
   }
 }
 
@@ -2699,14 +2770,27 @@ textarea {
     max-height: 100vh !important;
     z-index: 12345;
   }
+  .main {
+    height: 100vh;
+  }
+  .main-sec {
+    height: 100vh;
+  }
   .reg-main {
     margin-top: 0;
+    height: 100vh;
   }
   .reg-main .reg-box {
     width: 100%;
   }
+  .overlay {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
   .register-form {
     border: none !important;
+    padding-top: 0 !important;
   }
   .register-form .imag {
     display: inline-block;

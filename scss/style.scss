@@ -130,7 +130,8 @@ $primary-color: #fcb415;
     background: url(../images/background.svg) no-repeat center center/cover;
     height: 100vh;
     position: relative;
-
+    overflow-y: hidden;
+    
     .overlay {
         position: absolute;
         top: 0;
@@ -153,8 +154,8 @@ $primary-color: #fcb415;
         align-items: center;
         justify-content: center;
         padding: 1rem;
-        margin-top: 2.5rem;
-        margin-top: 110px;
+        // margin-top: 2.5rem;
+        // margin-top: 110px;
 
         .alumni-img {
             width: 100px;
@@ -172,7 +173,7 @@ $primary-color: #fcb415;
             font-size: 43px;
             text-align: center;
             color: $white;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
 
         .login-form {
@@ -1406,6 +1407,10 @@ $primary-color: #fcb415;
             height: 220px;
             overflow: hidden;
 
+            marquee {
+                height: 220px;
+            }
+
             .card {
                 border-radius: 0;
 
@@ -1458,6 +1463,10 @@ $primary-color: #fcb415;
             margin-bottom: 1.5rem;
             overflow: hidden;
             height: 300px;
+            
+            marquee {
+                height: 300px;
+            }
 
             .card {
                 border: none;
@@ -1533,8 +1542,12 @@ $primary-color: #fcb415;
         }
 
         .right-bottom {
-            // height: 370px;
+            height: 315px;
             overflow: hidden;
+
+            marquee {
+                height: 315px;
+            }
             
             .right-bottom-header {
                 background: white;
@@ -1604,11 +1617,8 @@ $primary-color: #fcb415;
     background: url(../images/background.svg) no-repeat center center/cover;
     position: relative;
     margin-top: 75px;
-    // overflow-y: scroll;
     min-height: 100vh;
     overflow: hidden;
-    padding-top: 200px;
-    
 
     .overlay {
         position: absolute;
@@ -1625,12 +1635,12 @@ $primary-color: #fcb415;
         border-radius: 25px;
         background: rgba(0, 0, 0, 0.4);
         border: 3px solid $primary-color;
-        margin-top: 2.5rem;
-        padding: 1.75rem;
+        margin-top: 6rem;
+        padding: 1rem 1.75rem;
         font-family: $secondary-font;
         position: relative;
-        margin-top: 110px;
         z-index: 1;
+        overflow: hidden;
 
         .register-title {
             font-family: $secondary-font;
@@ -1667,13 +1677,14 @@ $primary-color: #fcb415;
             .single-item {
                 p {
                     text-align: justify;
-                    padding: 1rem;
+                    // padding: 1rem;
+                    padding: 0;
                 }
             }
 
             .slick-prev {
                 top: auto;
-                bottom: -25px;
+                bottom: 0;
                 left: auto;
                 right: 50px;
                 background: $primary-color;
@@ -1700,7 +1711,7 @@ $primary-color: #fcb415;
 
             .slick-next {
                 top: auto;
-                bottom: -25px;
+                bottom: 0;
                 right: 0;
                 background: $primary-color;
                 padding: 1rem;
@@ -1815,6 +1826,10 @@ $primary-color: #fcb415;
     .slick-arrow {
         font-size: 0;
     }
+}
+
+.reg-hei {
+    max-height: 90vh;
 }
 
 /** MAIN SECTION END */

@@ -1,6 +1,28 @@
+
+@media (min-width: 991px) and (max-width: 1200px) {
+    .main-section {
+        .sidebar {
+            max-height: 500px !important;
+            overflow-y: scroll;
+            width: 250px;
+            // margin-right: 1rem;
+            z-index: 1;
+        }
+    }
+
+    .footer {
+        z-index: 125;
+    }
+}
+
 @media(max-width: 768px) {
     .header {
         border-width: .25rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 2;
 
         .responsive-menu {
             .brand {
@@ -59,9 +81,122 @@
             font-size: 13px;
         }
     }
+    
+    .reg-main {
+        overflow: hidden;
+        margin-top: 2rem !important;
+
+        .form-header {
+            display: flex;
+            align-items: center;
+            color: white;
+            margin: 2rem 0 -1rem;
+            overflow: hidden;
+
+            &-left {
+                margin-right: 1rem;
+
+                &-img {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+
+        .register-form {
+            overflow: hidden;
+            border: none;
+            margin-top: 0;
+            max-height: 100vh;
+            overflow-y: scroll;
+
+            .register-title {
+                font-size: 1.25rem;
+                text-align: center !important;
+            }
+
+            .imag {
+                display: inline-block;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: 0rem;
+                }
+            }
+
+            .rig {
+                margin-top: -3rem;
+                margin-left: 1rem;
+
+                .register-text {
+                    font-size: 13px;
+                    // margin-left: 1rem;
+                    text-align: center;
+                    margin-bottom: 0 !important;
+                }
+            }
+
+            .register-text {
+                font-size: 14px !important;
+                color: $white;
+                margin-bottom: 0;
+
+                a {
+                    text-decoration: none;
+                    font-size: 14px !important;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            .lead {
+                font-size: 14px !important;
+                color: $white;
+            }
+
+            .form-group,
+            .input-group {
+                font-size: 14px;
+
+                .form-control {
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1.5px #707070;
+                    color: #ffffff;
+
+                    &::placeholder {
+                        font-size: 14px;
+                        color: #ffffff;
+                    }
+                }
+
+                .input-group-text {
+                    background: transparent;
+                    border: none;
+                    border-bottom: solid 1.5px #707070;
+                    color: #ffffff;
+                }
+            }
+
+            .form-check-label {
+                font-size: 14px;
+            }
+        }
+
+        .main.reg-main {
+            height: auto !important;
+        }
+
+        .register-txt {
+            font-size: 14px;
+        }
+    }
+
 
     .main-section {
-        // margin-top: 80px;
 
         .sidebar {
             height: 100vh;
@@ -82,6 +217,10 @@
 
             .profile-form {
                 min-height: 100%;
+            }
+
+            .post-form {
+                padding-top: 1.5rem;
             }
 
             .posts {
@@ -208,18 +347,26 @@
         }
     }
 
+    .single-item {
+        p {
+            padding-bottom: 1rem;
+        }
+    }
+
+    .main-sec {
+        margin-top: 0;
+    }
+
     .main {
-        // position: static;
-        // height: 120vh;
-        // overflow: hidden;
+        max-height: 75vh !important;
 
         .overlay {
             height: 100%;
-            margin-bottom: 2rem;
+            // align-items: flex-start;
         }
 
         .login-details {
-            margin: 100px 0 0;
+            margin: 60px 0 0;
             padding: 0;
 
             .alumni-title {
@@ -239,8 +386,8 @@
 
         .alumni-img {
             img {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
         }
 
@@ -259,120 +406,21 @@
         }
     }
 
-    .reg-main {
-        // height: auto;
-        max-height: 100vh;
-        // overflow-y: scroll;
+    
+    .welcome-main {
+        height: 480px;
 
-        .form-header {
-            display: flex;
-            align-items: center;
-            color: white;
-            margin: 2rem 0 -1rem;
-            overflow: hidden;
-
-            &-left {
-                margin-right: 1rem;
-
-                &-img {
-                    width: 70px;
-                    height: 70px;
-                }
+        .welcome-img {
+            margin-top: 1rem;
+            img {
+                width: 80px;
+                height: 80px;
             }
-        }
-
-        .register-form {
-            overflow: hidden;
-            border: none;
-            margin-top: 0;
-            max-height: 100vh;
-
-            .register-title {
-                font-size: 1.25rem;
-                text-align: center !important;
-            }
-
-            .imag {
-                display: inline-block;
-
-                img {
-                    width: 50px;
-                    height: 50px;
-                    margin-left: 0rem;
-                }
-            }
-
-            .rig {
-                margin-top: -3rem;
-                margin-left: 1rem;
-
-                .register-text {
-                    font-size: 13px;
-                    // margin-left: 1rem;
-                    text-align: center;
-                    margin-bottom: 0 !important;
-                }
-            }
-
-            .register-text {
-                font-size: 14px !important;
-                color: $white;
-                margin-bottom: 0;
-
-                a {
-                    text-decoration: none;
-                    font-size: 14px !important;
-
-                    &:hover {
-                        text-decoration: underline;
-                    }
-                }
-            }
-
-            .lead {
-                font-size: 14px !important;
-                color: $white;
-            }
-
-            .form-group,
-            .input-group {
-                font-size: 14px;
-
-                .form-control {
-                    background: transparent;
-                    border: none;
-                    border-bottom: solid 1.5px #707070;
-                    color: #ffffff;
-
-                    &::placeholder {
-                        font-size: 14px;
-                        color: #ffffff;
-                    }
-                }
-
-                .input-group-text {
-                    background: transparent;
-                    border: none;
-                    border-bottom: solid 1.5px #707070;
-                    color: #ffffff;
-                }
-            }
-
-            .form-check-label {
-                font-size: 14px;
-            }
-        }
-
-        .main.reg-main {
-            height: auto !important;
-        }
-
-        .register-txt {
-            font-size: 14px;
         }
     }
 
     .main-sec {
+
         .alumni {
             padding: 1.5rem 0;
         }
@@ -382,13 +430,8 @@
         }
 
         .alumni-title {
-            margin-top: -2.5rem;
+            margin-top: -4.5rem;
         }
-    }
-
-    .welcome-main {
-        height: 100vh;
-        max-height: 100vh !important;
     }
 
     .post-btn,
@@ -406,7 +449,7 @@
     .header.login-header,
     .header.welcome-header,
     .header.forgot-header {
-        position: static !important;
+        position: fixed !important;
 
         .brand {
             img {
@@ -415,7 +458,7 @@
         }
 
         .alu-text {
-            font-size: 1rem !important;
+            font-size: 1.25rem !important;
         }
     }
 
@@ -432,7 +475,7 @@
 
 
     .header.reg-header {
-        position: static !important;
+        position: fixed !important;
 
         .brand {
             img {
@@ -441,12 +484,36 @@
         }
     }
 
+    .main.reg-main {
+        height: 75vh !important;
+    }
+
+    .reg-hei {
+        overflow-y: scroll;
+        min-height: 100vh;
+        margin-top: 0 !important;
+    }
+
     .footer {
         .left-side {
             img {
                 margin: 0 auto;
             }
         }
+    }
+
+    .login-form .register-form {
+        margin-top: 3.5rem !important;
+    }
+
+    .register-form {
+        padding-top: 5rem !important;
+    }
+    .main-sec {
+        height: 540px !important;
+        margin-top: 40px;
+        overflow: hidden;
+        overflow-y: hidden;
     }
 }
 
@@ -575,16 +642,31 @@
         max-height: 100vh !important;
         z-index: 12345;
     }
+
+    .main {
+        height: 100vh;
+    }
+
+    .main-sec {
+        height: 100vh;
+    }
+
     .reg-main {
         margin-top: 0;
+        height: 100vh;
 
         .reg-box {
             width: 100%;
         }
     }
 
+    .overlay {
+        align-items: flex-start;
+    }
+
     .register-form {
         border: none !important;
+        padding-top: 0 !important;
 
         .imag {
             display: inline-block;

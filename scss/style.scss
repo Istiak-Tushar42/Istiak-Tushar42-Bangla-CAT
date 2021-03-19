@@ -259,11 +259,11 @@ $primary-color: #fcb415;
 
             .input-group {
                 .input-group-text {
-
                     span,
                     i {
                         font-size: 1rem;
                     }
+                    
 
                     .icon-password {
                         font-size: 1.5rem;
@@ -393,7 +393,7 @@ $primary-color: #fcb415;
         overflow: hidden;
         top: 75px;
         min-height: 100vh;
-        width: 260px;
+        width: 306px;
         overflow: hidden;
 
         display: flex;
@@ -1749,6 +1749,7 @@ $primary-color: #fcb415;
         .form-control {
             font-size: 1rem;
             position: relative;
+            border-radius: .25rem !important;
         }
 
         .pass {
@@ -1758,8 +1759,6 @@ $primary-color: #fcb415;
             transform: translateY(-50%);
             cursor: pointer;
             height: 100%;
-            border-top-right-radius: 5px;
-            border-bottom-right-radius: 5px;
         }
 
         .register-btn {
@@ -1793,6 +1792,9 @@ $primary-color: #fcb415;
 
         .input-group {
             .input-group-text {
+                border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+                border-right: none;
 
                 span,
                 i {
@@ -1807,6 +1809,13 @@ $primary-color: #fcb415;
                 .fa-phone-alt {
                     font-size: 1.25rem;
                 }
+            }
+
+                            
+            .form-control {
+                border-top-left-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+                border-left: none;
             }
         }
     }

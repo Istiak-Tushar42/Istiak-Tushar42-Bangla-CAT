@@ -40,7 +40,7 @@ body {
 .form-control:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-color: #fcb415;
+  border-color: #fcb415 !important;
 }
 
 .form-check-input:focus {
@@ -103,6 +103,11 @@ textarea {
 
 .form-control {
   text-align: left;
+  border: solid .1rem #ced4da;
+}
+
+.input-group-text {
+  width: 50px;
 }
 
 @font-face {
@@ -753,7 +758,7 @@ textarea {
   overflow: hidden;
   top: 75px;
   min-height: 100vh;
-  width: 260px;
+  width: 306px;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2127,6 +2132,7 @@ textarea {
 .reg-main .register-form .form-control {
   font-size: 1rem;
   position: relative;
+  border-radius: .25rem !important;
 }
 
 .reg-main .register-form .pass {
@@ -2137,8 +2143,6 @@ textarea {
           transform: translateY(-50%);
   cursor: pointer;
   height: 100%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
 }
 
 .reg-main .register-form .register-btn {
@@ -2172,6 +2176,12 @@ textarea {
   text-decoration: none;
 }
 
+.reg-main .register-form .input-group .input-group-text {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: none;
+}
+
 .reg-main .register-form .input-group .input-group-text span,
 .reg-main .register-form .input-group .input-group-text i {
   font-size: 1rem;
@@ -2184,6 +2194,12 @@ textarea {
 
 .reg-main .register-form .input-group .input-group-text .fa-phone-alt {
   font-size: 1.25rem;
+}
+
+.reg-main .register-form .input-group .form-control {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+  border-left: none;
 }
 
 .reg-main .register-txt {
@@ -2331,6 +2347,9 @@ textarea {
     margin-top: 0;
     max-height: 100vh;
   }
+  .reg-main .register-form .form-control {
+    border-radius: 0 !important;
+  }
   .reg-main .register-form .register-title {
     font-size: 1.25rem;
     text-align: center !important;
@@ -2420,15 +2439,24 @@ textarea {
   }
   .reg-main .reg-height {
     overflow-y: scroll;
-    margin-top: 0;
+    margin-top: -90px;
     margin-bottom: 0;
     max-height: 70vh;
+    padding-top: 2rem;
+  }
+  .reg-main .reg-height::-webkit-scrollbar {
+    width: 5px;
+    background: lightgrey;
+  }
+  .reg-main .reg-height::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
   }
   .reg-main .main.reg-main {
     height: auto !important;
   }
   .reg-main .register-txt {
-    font-size: 14px;
+    font-size: 1rem !important;
   }
   .main-section .sidebar {
     height: 100vh;
@@ -2598,7 +2626,7 @@ textarea {
   .header.login-header .alu-text,
   .header.welcome-header .alu-text,
   .header.forgot-header .alu-text {
-    font-size: 1.25rem !important;
+    font-size: 13px;
   }
   .form-control {
     border-radius: 2px;
@@ -3905,6 +3933,14 @@ textarea {
     width: 260px;
     max-height: 500px;
     overflow-y: scroll;
+  }
+  .main-section .sidebar::-webkit-scrollbar {
+    width: 10px;
+    background: lightgrey;
+  }
+  .main-section .sidebar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 20px;
   }
   .main-section .right-content {
     margin-top: 55px;

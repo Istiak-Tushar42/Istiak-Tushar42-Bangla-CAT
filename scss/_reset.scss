@@ -46,7 +46,7 @@ body {
 
 .form-control:focus {
     box-shadow: none;
-    border-color: $primary-color;
+    border-color: $primary-color !important;
 }
 
 .form-check-input:focus {
@@ -90,4 +90,9 @@ textarea {
 
 .form-control {
     text-align: left;
+    border: solid .1rem #ced4da;
+}
+
+.input-group-text {
+    width: 50px;
 }

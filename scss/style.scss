@@ -177,11 +177,6 @@ $primary-color: #fcb415;
         }
 
         .login-form {
-
-            .form-control {
-                position: relative;
-            }
-
             .pass {
                 position: absolute;
                 right: 10px;
@@ -270,6 +265,11 @@ $primary-color: #fcb415;
                         padding-right: .5rem;
                     }
                 }
+
+                .form-control {
+                    position: relative;
+                    border: none !important;
+                }
             }
         }
     }
@@ -290,7 +290,7 @@ $primary-color: #fcb415;
         align-items: center;
         justify-content: center;
         padding: 1rem;
-        margin-top: 8rem;
+        margin-top: 2rem;
 
         position: relative;
 
@@ -1664,7 +1664,7 @@ $primary-color: #fcb415;
             color: $primary-color;
             text-align: center;
         }
-
+        
 
         .privacy-text {
             font-family: $secondary-font;

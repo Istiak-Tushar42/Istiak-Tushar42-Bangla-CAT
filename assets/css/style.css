@@ -527,10 +527,6 @@ textarea {
   margin-bottom: 1rem;
 }
 
-.main .login-details .login-form .form-control {
-  position: relative;
-}
-
 .main .login-details .login-form .pass {
   position: absolute;
   right: 10px;
@@ -615,6 +611,11 @@ textarea {
   padding-right: .5rem;
 }
 
+.main .login-details .login-form .input-group .form-control {
+  position: relative;
+  border: none !important;
+}
+
 .main .alumni-img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,7 +644,7 @@ textarea {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1rem;
-  margin-top: 8rem;
+  margin-top: 2rem;
   position: relative;
 }
 
@@ -2439,7 +2440,7 @@ textarea {
   }
   .reg-main .reg-height {
     overflow-y: scroll;
-    margin-top: -90px;
+    margin-top: -78px;
     margin-bottom: 0;
     max-height: 70vh;
     padding-top: 2rem;
